@@ -1,3 +1,5 @@
+import getRoutes from "./utils/getRoutes";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -26,9 +28,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -44,17 +44,19 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    "@nuxtjs/sitemap",
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
-    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  sitemap: {
+    hostname: 'https://www.blog.harampark.com',
+    routes() {
+      return getRoutes();
+    },
+  },
 }

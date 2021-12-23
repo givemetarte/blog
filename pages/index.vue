@@ -22,13 +22,15 @@
       
       <div v-for="ftarticle of featured" :key="ftarticle" class="nthz hidden md:block hover:drop-shadow-lg">
         <nuxt-link :to='`${ftarticle.slug}`'>
-          <div class="h-52 md:h-60">
+          <div class="h-52 md:h-64">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
-              <h3 class="text-gray-800 poppins text-lg font-medium keepall mb-1">{{ ftarticle.title }}</h3>
+              <h3 class="text-gray-800 poppins text-lg font-semibold keepall mb-2">{{ ftarticle.title }}</h3>
+              <!--
               <p class="text-sm md:text-sm text-gray-500 mb-1">{{ ftarticle.description }}</p>
+              -->
               <div v-for="(tag,idx) in ftarticle.tags" :key="idx" 
-              class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs mr-1">#{{ tag }}
+              class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs mr-1 mb-1">#{{ tag }}
               </div>
             </div>
           </div>
@@ -37,13 +39,15 @@
 
       <div v-for="featarticle of featuredone" :key="featarticle" class="block md:hidden hover:drop-shadow-lg">
         <nuxt-link :to='`${featarticle.slug}`'>
-          <div class="back-purple rounded-lg h-52 py-5 px-6 relative">
+          <div class="back-purple rounded-lg h-60 py-5 px-6 relative">
             <div>
-              <p class="poppins text-gray-800">{{featarticle.category}}</p>
-              <p class="text-xl poppins text-gray-800 font-medium pt-1">{{featarticle.title}}</p>
-              <p class="poppins text-gray-600 pt-1 ftmore mb-1">{{featarticle.description}}</p>
+              <p class="text-xs text-gray-500">{{featarticle.category}}</p>
+              <p class="text-base text-gray-800 font-semibold pt-1 mb-1">{{featarticle.title}}</p>
+              <!--
+              <p class="text-gray-600 pt-1 ftmore mb-1">{{featarticle.description}}</p>
+              -->
               <div v-for="(tag,idx) in featarticle.tags" :key="idx" 
-              class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs mr-1">#{{ tag }}
+              class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs mr-1 mb-1">#{{ tag }}
               </div>
             </div>
           </div>
@@ -67,9 +71,9 @@
         <div class="px-5 md:px-6 group" v-for="article of articles" :key="article">
           <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
               <div class="flex justify-between border-t py-6 border-gray-200">
-                <div class="w-full md:w-4/6">
+                <div class="w-full md:w-5/6">
                     <p class="mb-1 md:mb-1 text-sm md:text-sm font-medium text-cherry group-hover:text-gray-400">{{article.category}}</p>
-                    <h3 class="custom-text mb-1 md:mb-1.5 text-lg md:text-xl font-semibold text-gray-700 transition group-hover:text-cherry group-hover:duration-500">{{ article.title }}</h3>
+                    <h3 class="custom-text mb-1 md:mb-2 text-lg md:text-xl font-semibold text-gray-700 transition group-hover:text-cherry group-hover:duration-500">{{ article.title }}</h3>
                     <p class="mb-1 md:mb-1.5 text-sm md:text-base text-gray-500 custom-text">{{article.description}}</p>
                     <p class="text-sm md:text-sm text-gray-400">{{ article.datetime }}</p>
                 </div>

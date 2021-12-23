@@ -2,7 +2,7 @@
   <article class="relative max-w-3xl mx-auto justify-center mb-10 md:mb-10">
     
     <header class="flex flex-col item-start text-base justify-center text-center mt-1 mb-7">
-      <span class="text-base md:text-base text-gray-400 mb-2">{{ article.datetime }}</span>
+      <span class="text-base md:text-base text-gray-400 mb-2">{{ article.category }}</span>
       <!--
       <p class="text-sm md:text-base text-gray-400 text-center mb-2">
         <span class="py-1 px-2 rounded-lg bg-gray-100 hover:drop-shadow">
@@ -10,15 +10,18 @@
         </span>
       </p>
       -->
-      <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-4xl text-center font-semibold text-gray-700 custom-text">{{ article.title }}</h1>
-      <div class="space-x-2 flex-1">
-        <div v-for="tag in article.tags" :key="{tag}" 
-              class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-400 text-sm transition hover:bg-gray-200 hover:duration-100">#{{ tag }}
-        </div>
-      </div>    
+      <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 custom-text">{{ article.title }}</h1>
+      <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
     </header>
     
-    <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 text-sm" />
+    <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 text-sm selection:bg-cherrylight selection:text-gray-700" />
+    
+    <div class="space-x-2 flex-1 mt-3 mb-3">
+      <div class="inline-flex text-gray-700 text-base">Tags:</div>
+      <div v-for="tag in article.tags" :key="{tag}" 
+              class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs">#{{ tag }}
+      </div>
+    </div>
     <Comments />
     <Prevnext :prev="prev" :next="next" />
   </article>
@@ -42,7 +45,7 @@
             return new Date(date).toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'})
         }
     },
-
+    
   }
 </script>
 

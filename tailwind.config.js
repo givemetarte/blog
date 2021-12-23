@@ -1,6 +1,4 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
   content: [],
   theme: {
     extend: {
@@ -21,7 +19,25 @@ module.exports = {
       },
       animation: {
         wiggle: 'wiggle 0.5s ease-in-out infinite'
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h1: {
+              color: '#374151',
+            },
+            h2: {
+              color: '#374151',
+            },
+            h3: {
+              color: '#374151',
+            },
+            h4: {
+              color: '#374151',
+            },
+          }
+        }
+      }),
     },
   },
   plugins: [require('@tailwindcss/typography')],

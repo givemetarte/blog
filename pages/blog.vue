@@ -15,7 +15,7 @@
         <div class="px-5 md:px-6 group" v-for="article of articles" :key="article">
           <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
               <div class="article-inner flex justify-between border-t py-6 border-gray-200">
-                <div class="w-full md:w-4/6">
+                <div class="w-full md:w-5/6">
                     <p class="mb-1 md:mb-1 text-sm md:text-sm font-medium text-cherry group-hover:text-gray-400">{{article.category}}</p>
                     <h3 class="mb-1 md:mb-1.5 text-lg md:text-xl font-semibold text-gray-700 transition group-hover:text-cherry group-hover:duration-500">{{ article.title }}</h3>
                     <p class="mb-1 md:mb-1.5 text-sm md:text-base text-gray-500 custom-text">{{article.description}}</p>
