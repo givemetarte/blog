@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.harampark.com/sitemap.xml
+Sitemap: https://www.blog.harampark.com/sitemap.xml

@@ -16,10 +16,10 @@
     
     <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 text-sm selection:bg-cherrylight selection:text-gray-700" />
     
-    <div class="space-x-2 flex-1 mt-3 mb-3">
-      <div class="inline-flex text-gray-700 text-base">Tags:</div>
+    <div class="space-x-2 flex-1 mt-3 mb-3 px-6">
+      <div class="inline-flex text-gray-700 text-xs md:text-base">Tags:</div>
       <div v-for="tag in article.tags" :key="{tag}" 
-              class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs">#{{ tag }}
+              class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs mb-1">#{{ tag }}
       </div>
     </div>
     <Comments />
