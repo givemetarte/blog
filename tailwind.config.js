@@ -5,8 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'cherry': '#c06c84',
-        'cherrylight': '#cf90a2',
+        cherry: '#c06c84',
+        cherrylight: '#cf90a2',
+        lavenderblush: '#F9F0F3',
       },
       keyframes: {
         wiggle: {

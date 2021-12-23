@@ -1,5 +1,3 @@
-import * as FontAwesome from './assets/icon/fontawesome'
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',

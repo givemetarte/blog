@@ -1,24 +1,17 @@
 <template>
-    <footer class="w-full pt-11 pb-11 md:pt-11 md:pb-11 px-2 md:px-5 border-t md:border-t border-gray-200">
-        <div class="max-w-4xl mx-auto px-5">
-            <div class="block md:flex relative">
+    <footer class="w-full pt-11 pb-11 md:pt-11 md:pb-11 px-2 md:px-5 border-t md:border-t border-gray-200">    
+        <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center justify-start md:justify-between">
+            <ul class="flex flex-col md:flex-row text-sm space-y-2 md:space-y-0">
+                <li class="text-sm text-gray-700 mr-0 md:mr-3 flex justify-center"><nuxt-link to="/" class="hover:text-cherry">하람 블로그</nuxt-link></li>
+                <li class="hidden text-sm text-gray-700 mr-0 md:mr-3 flex justify-center md:block">|</li>
+                <li class="text-sm text-gray-700 mr-0 md:mr-3 flex justify-center"><a href="https://github.com/givemetarte" target="_blank"><GithubLogo /></a></li>
+            </ul>
 
-                <div class="justify-around md:justify-start px-8 md:px-0 items-start flex">
-                    <span class="text-xs text-gray-700">
-                        <nuxt-link to="/" class="hover:text-cherry">하람 블로그</nuxt-link> &nbsp; | 
-                        <a href="https://github.com/givemetarte" target="blank" class=""><GithubLogo /></a>
-                    </span>
-                </div>
-
-                <ul class="flex justify-center md:absolute md:bottom-0 md:right-0 md:block mt-10 md:mt-0">
-                    <li class="text-xs md:text-xs text-gray-700">
-                        © 2021 Haram Park 🤍 Big thanks to <a href="https://www.blog.penielcho.com/" target="blank" class="hover:text-cherry">Peniel</a>
-                    </li>
-                </ul>
-
+            <div class="text-sm text-gray-700 mt-8 md:mt-0 mb-3">
+                🤍 Big thanks to <span class="highlight-xs hover:drop-shadow"><a href="https://github.com/thepenielcho" target="_blank">Peniel</a></span>
             </div>
-        </div>
 
+        </div>
     </footer>
 </template>
 
