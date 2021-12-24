@@ -42,7 +42,7 @@
           <div class="back-purple rounded-lg h-60 py-5 px-6 relative">
             <div>
               <p class="text-xs text-gray-500">{{featarticle.category}}</p>
-              <p class="text-base text-gray-800 font-semibold pt-1 mb-1">{{featarticle.title}}</p>
+              <p class="text-base text-gray-800 font-semibold pt-1 mb-2">{{featarticle.title}}</p>
               <!--
               <p class="text-gray-600 pt-1 ftmore mb-1">{{featarticle.description}}</p>
               -->
