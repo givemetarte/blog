@@ -25,7 +25,7 @@
           <div class="h-52 md:h-80">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
-              <h3 class="text-gray-800 text-lg font-semibold keepall mb-2">{{ ftarticle.title }}</h3>
+              <h3 class="text-gray-700 text-lg font-semibold keepall mb-2">{{ ftarticle.title }}</h3>
               <!--
               <p class="text-sm md:text-sm text-gray-500 mb-1">{{ ftarticle.description }}</p>
               -->

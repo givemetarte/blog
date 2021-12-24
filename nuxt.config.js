@@ -25,6 +25,7 @@ export default {
   css: [
     // add tailwind.css
     '@/assets/css/tailwind.css',
+    '~/assets/css/fonts.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
