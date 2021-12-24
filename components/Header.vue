@@ -1,5 +1,5 @@
 <template>
-    <header class="sticky top-0 z-50 w-full p-10 bg-white">
+    <header class="sticky top-0 z-50 w-full px-6 py-10 bg-white">
         <div class="max-w-4xl mx-auto flex items-center justify-between">
             <div class="max-w-fit ml-1.5 md:ml-0 hover:animate-wiggle hover:drop-shadow">
                 <nuxt-link to="/">

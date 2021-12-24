@@ -3,7 +3,7 @@ title: nuxt와 tailwind css로 블로그 만들기
 description: 디자인이 비슷한 jekyll에서 벗어나 디자인 자유도가 높은 tailwind css와 nuxt로 더 이쁜 블로그를 만들어보자.
 slug: nuxt-tailwind-blog
 author: 박하람
-category: Front-end Web
+category: Front-End Web
 datetime: 2021. 12. 23.
 language: Korean
 featured: Featured
