@@ -15,12 +15,15 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Haram Blog' },
       { name: 'format-detection', content: 'telephone=no' },
+      // Twitter
+      // Test on: https://cards-dev.twitter.com/validator
       {
         hid: 't-type',
         name: 'twitter:card',
         content: 'summary'
       },
-
+      // Open Graph
+      // Test on: https://developers.facebook.com/tools/debug/
       { hid: 'og:site_name', property: 'og:site_name', content: "Haram's Blog" },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -55,7 +58,14 @@ export default {
         content: 'Haram image'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' },
+      {
+        hid: "canonical",
+        rel: "canonical",
+        href: process.env.BASE_URL,
+      },
+    ],
   },
 
   loading: { color: '#c06c84' },

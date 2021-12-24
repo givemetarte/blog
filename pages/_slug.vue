@@ -105,8 +105,22 @@
             property: 'og:image:alt',
             content: this.article.title
             },
+            {
+              property: "article:published_time",
+              content: this.article.createdAt,
+            },
+            {
+              property: "article:tag",
+              content: this.article.tags ? this.article.tags.toString() : "",
+            },
             
-            
+            ],
+            link: [
+              {
+                hid: "canonical",
+                rel: "canonical",
+                href: `https://www.blog.harampark.com/${this.$route.params.slug}`,
+              },
             ],
         }
     },
