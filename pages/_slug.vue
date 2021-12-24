@@ -93,12 +93,12 @@
             {
             hid: 'og:image',
             property: 'og:image',
-            content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/card-bg.png'
+            content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/og-image.png'
             },
             {
             hid: 'og:image:secure_url',
             property: 'og:image:secure_url',
-            content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/card-bg.png'
+            content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/og-image.png'
             },
             {
             hid: 'og:image:alt',
