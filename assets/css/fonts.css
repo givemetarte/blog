@@ -21,6 +21,19 @@
 
 @font-face {
   font-family: 'Spoqa Han Sans Neo';
+  font-weight: 600;
+  src: local('Spoqa Han Sans Neo Medium'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf')
+      format('truetype');
+  unicode-range: U+AC00-D7AF;
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
   font-weight: 500;
   src: local('Spoqa Han Sans Neo Medium'),
     url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2')
