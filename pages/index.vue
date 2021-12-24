@@ -22,7 +22,7 @@
       
       <div v-for="ftarticle of featured" :key="ftarticle" class="nthz hidden md:block hover:drop-shadow-lg">
         <nuxt-link :to='`${ftarticle.slug}`'>
-          <div class="h-52 md:h-64">
+          <div class="h-52 md:h-80">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
               <h3 class="text-gray-800 text-lg font-semibold keepall mb-2">{{ ftarticle.title }}</h3>
