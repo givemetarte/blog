@@ -1,5 +1,5 @@
 * {
-  font-family: 'Inter', 'Noto Sans Korean', 'sans-serif';
+  font-family: 'Inter', 'Noto Sans KR', 'sans-serif';
 }
 
 .font-title {
@@ -17,7 +17,7 @@
 
 /* Noto Sans KR */
 @font-face {
-  font-family: 'Noto Sans Korean';
+  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-  font-family: 'Noto Sans Korean';
+  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -34,7 +34,7 @@
 
 /* font-normal */
 @font-face {
-  font-family: 'Noto Sans Korean';
+  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -43,7 +43,7 @@
 
 /* font-medium */
 @font-face {
-  font-family: 'Noto Sans Korean';
+  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -52,7 +52,7 @@
 
 /* font-bold */
 @font-face {
-  font-family: 'Noto Sans Korean';
+  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -60,7 +60,7 @@
 }
 
 @font-face {
-  font-family: 'Noto Sans Korean';
+  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
