@@ -90,6 +90,23 @@
             name: 'og:url',
             content: `https://www.blog.harampark.com/${this.$route.params.slug}`
             },
+            {
+            hid: 'og:image',
+            property: 'og:image',
+            content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/card-bg.png'
+            },
+            {
+            hid: 'og:image:secure_url',
+            property: 'og:image:secure_url',
+            content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/card-bg.png'
+            },
+            {
+            hid: 'og:image:alt',
+            property: 'og:image:alt',
+            content: this.article.title
+            },
+            
+            
             ],
         }
     },
