@@ -45,8 +45,56 @@
             return new Date(date).toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'})
         }
     },
-    
-  }
+    head() {
+        return {
+            title: this.article.title,
+            description: this.article.description,
+            htmlAttrs: {
+            lang: 'ko'
+            },
+            meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            {
+                hid: 't-type',
+                name: 'twitter:card',
+                content: 'summary'
+            },
+            {
+                hid: 't-title',
+                name: 'twitter:title',
+                content: this.article.title
+            },
+            {
+                hid: 't-description',
+                name: 'twitter:description',
+                content: this.article.description
+            },
+            {
+            hid: 'og-type',
+            property: 'og:type',
+            content: 'article'
+            },
+            {
+            hid: 'og-title',
+            property: 'og:title',
+            content: this.article.title
+            },
+            {
+            hid: 'og-description',
+            property: 'og:description',
+            content: this.article.description
+            },
+            {
+            hid: 'og-url',
+            name: 'og:url',
+            content: `https://www.blog.harampark.com/${this.$route.params.slug}`
+            },
+            ],
+        }
+    },
+}
+
 </script>
 
 <style scpoed>

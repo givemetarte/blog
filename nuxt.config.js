@@ -15,6 +15,45 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Haram Blog' },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 't-type',
+        name: 'twitter:card',
+        content: 'summary'
+      },
+
+      { hid: 'og:site_name', property: 'og:site_name', content: "Haram's Blog" },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.blog.harampark.com'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: "Haram's Blog"
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          "👩🏻‍💻 박하람의 기술 블로그 | Haram's Tech Blog"
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Haram image'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' }],
   },
