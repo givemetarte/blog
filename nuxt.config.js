@@ -42,12 +42,12 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+        content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/og-image.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://raw.githubusercontent.com/GDSC-CAU/GDSC-CAU.github.io/main/static/opengraph_image.png'
+        content: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/og-image.png'
       },
       {
         hid: 'og:image:alt',
