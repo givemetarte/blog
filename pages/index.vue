@@ -7,7 +7,7 @@
           <h2 class="pb-6 poppins text-left md:text-left text-4xl md:text-6xl font-medium text-gray-800 font-title">
             Hi, I'm <span class="highlight-sm font-title">Haram</span> !
           </h2>
-          <div class="font-normal text-sm md:text-base text-gray-600 keepall font-inter">
+          <div class="font-normal text-sm md:text-base text-gray-600 keepall">
             파워 블로거👀가 되는 그날까지. <br> 주로 지식그래프와 관련된 글을 씁니다.
           </div>
       </div>
@@ -15,7 +15,7 @@
 
     <!--featured articles-->
     <div class="px-5">
-        <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-semibold">추천 글</div>
+        <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-bold">추천 글</div>
     </div>
 
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0 pt-5">
@@ -25,7 +25,7 @@
           <div class="h-52 md:h-80">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
-              <h3 class="text-gray-700 text-lg font-semibold keepall mb-2">{{ ftarticle.title }}</h3>
+              <h3 class="text-gray-700 text-lg font-bold keepall mb-2">{{ ftarticle.title }}</h3>
               <!--
               <p class="text-sm md:text-sm text-gray-500 mb-1">{{ ftarticle.description }}</p>
               -->
@@ -42,7 +42,7 @@
           <div class="back-purple rounded-lg h-60 py-5 px-6 relative">
             <div>
               <p class="text-xs text-gray-500">{{featarticle.category}}</p>
-              <p class="text-base text-gray-800 font-semibold pt-1 mb-2">{{featarticle.title}}</p>
+              <p class="text-base text-gray-800 font-bold pt-1 mb-2">{{featarticle.title}}</p>
               <!--
               <p class="text-gray-600 pt-1 ftmore mb-1">{{featarticle.description}}</p>
               -->
@@ -57,7 +57,7 @@
 
     <!-- latest articles -->
     <div class="px-5">
-        <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-semibold mb-2">최근 글보기</div>
+        <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-bold mb-2">최근 글보기</div>
         <div class="text-gray-600 font-normal text-sm md:text-base">최근 업로드 된 글 모음입니다. 주제별로 글을 보고 싶다면 아래 태그를 선택해주세요.</div>
     </div>
 
@@ -73,7 +73,7 @@
               <div class="flex justify-between border-t py-6 border-gray-200">
                 <div class="w-full md:w-5/6">
                     <p class="mb-1 md:mb-1 text-sm md:text-sm font-medium text-cherry group-hover:text-gray-400">{{article.category}}</p>
-                    <h3 class="custom-text mb-1 md:mb-2 text-lg md:text-xl font-semibold text-gray-700 transition group-hover:text-cherry group-hover:duration-500">{{ article.title }}</h3>
+                    <h3 class="custom-text mb-1 md:mb-2 text-lg md:text-xl font-bold text-gray-700 transition group-hover:text-cherry group-hover:duration-500">{{ article.title }}</h3>
                     <p class="mb-1 md:mb-1.5 text-sm md:text-base text-gray-500 custom-text">{{article.description}}</p>
                     <p class="text-sm md:text-sm text-gray-400">{{ article.datetime }}</p>
                 </div>
