@@ -10,6 +10,7 @@ featured: Featured
 tags:
   - nuxt
   - tailwind
+  - blog
 ---
 
 이렇게 한번 첫번째 포스팅을 올려봅니다.
