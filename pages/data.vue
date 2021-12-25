@@ -32,7 +32,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
       .where({category: 'Data'})
-      .sortBy('datetime', 'asc')
+      .sortBy("datetime", "desc")
       .fetch();
     return {
       articles
