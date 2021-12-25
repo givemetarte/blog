@@ -65,7 +65,7 @@
             {
                 hid: 't-type',
                 name: 'twitter:card',
-                content: 'summary_large_image'
+                content: 'summary'
             },
             {
             hid: 'og-type',
@@ -73,23 +73,19 @@
             content: 'website'
             },
             {
-            hid: 'og-title',
+            hid: 'og:title',
             property: 'og:title',
             content: this.article.title
             },
             {
-            hid: 'og-description',
+            hid: 'og:description',
             property: 'og:description',
             content: this.article.description
             },
             {
-            hid: 'og-url',
-            name: 'og:url',
-            content: `https://www.blog.harampark.com/${this.$route.params.slug}`
-            },
-            {
             hid: 'og:image',
             property: 'og:image',
+            // content: this.article.img
             content: `https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/og-img.png`
             },
             {
@@ -102,14 +98,12 @@
             property: 'og:image:alt',
             content: this.article.title
             },
+            {
+            hid: 'og:url',
+            name: 'og:url',
+            content: `https://www.blog.harampark.com/${this.$route.params.slug}`
+            },
             ],
-            //link: [
-            //  {
-            //    hid: "canonical",
-            //    rel: "canonical",
-            //    href: `https://www.blog.harampark.com/${this.$route.params.slug}`,
-            //  },
-            //],
         }
     },
 }
