@@ -25,7 +25,7 @@ export default {
       // Open Graph
       // Test on: https://developers.facebook.com/tools/debug/
       { hid: 'og:site_name', property: 'og:site_name', content: "Haram's Blog" },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:type', property: 'og:type', content: 'Blog' },
       {
         hid: 'og:url',
         property: 'og:url',
@@ -55,7 +55,7 @@ export default {
       {
         hid: 'og:image:alt',
         property: 'og:image:alt',
-        content: 'Haram image'
+        content: 'Logo Image'
       }
     ],
     link: [
@@ -108,6 +108,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Generate sitemap
   sitemap: {
     hostname: 'https://www.blog.harampark.com',
     routes() {
