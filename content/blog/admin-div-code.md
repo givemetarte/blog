@@ -4,7 +4,7 @@ description: 대한민국의 행정구역코드는 행안부의 행정동코드,
 slug: admin-div-code
 author: 박하람
 category: Data
-datetime: 2021. 12. 21.
+datetime: 2021. 12. 25.
 language: Korean
 featured: Featured
 tags:

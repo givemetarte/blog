@@ -4,7 +4,7 @@ description: 오픈소스 그래프 데이터베이스 blazegraph, graphdb와 vi
 slug: opensource-graphdb-review
 author: 박하람
 category: Knowledge Graph
-datetime: 2021. 12. 23.
+datetime: 2021. 12. 24.
 language: Korean
 featured: Featured
 tags:
