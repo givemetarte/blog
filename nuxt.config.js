@@ -70,6 +70,11 @@ export default {
 
   loading: { color: '#c06c84' },
 
+  // 404 error page
+  generate: {
+    fallback: true,
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // add tailwind.css

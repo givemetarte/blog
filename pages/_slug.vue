@@ -29,16 +29,23 @@
 
 <script>
   export default {
-    async asyncData({ $content, params }) {
-      const article = await $content('blog', params.slug).fetch();
+    async asyncData({ $content, params, error }) {
+      try {
+        const article = await $content('blog', params.slug).fetch();
 
-      const [prev, next] = await $content('blog')
-        .only(['title', 'slug'])
-        .sortBy('datetime', 'asc')
-        .surround(params.slug)
-        .fetch()
-      
-      return { article, prev, next }
+        const [prev, next] = await $content('blog')
+          .only(['title', 'slug'])
+          .sortBy('datetime', 'asc')
+          .surround(params.slug)
+          .fetch()
+        
+        return { article, prev, next }
+      } catch(err) {
+        error({
+          statusCode: 404,
+          message: 'Page could not be found',
+        })
+      }
     },
     methods: {
         formatDate(date){
