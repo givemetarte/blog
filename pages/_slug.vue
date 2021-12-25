@@ -14,7 +14,7 @@
       <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
     </header>
     
-    <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 text-sm selection:bg-cherrylight selection:text-gray-700" />
+    <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 text-base selection:bg-cherrylight selection:text-gray-700" />
     
     <div class="space-x-2 flex-1 mt-3 mb-3 px-6">
       <div class="inline-flex text-gray-700 text-xs md:text-base">Tags:</div>
@@ -68,16 +68,6 @@
                 content: 'summary'
             },
             {
-                hid: 't-title',
-                name: 'twitter:title',
-                content: this.article.title
-            },
-            {
-                hid: 't-description',
-                name: 'twitter:description',
-                content: this.article.description
-            },
-            {
             hid: 'og-type',
             property: 'og:type',
             content: 'website'
@@ -112,23 +102,14 @@
             property: 'og:image:alt',
             content: this.article.title
             },
-            {
-              property: "article:published_time",
-              content: this.article.createdAt,
-            },
-            {
-              property: "article:tag",
-              content: this.article.tags ? this.article.tags.toString() : "",
-            },
-            
             ],
-            link: [
-              {
-                hid: "canonical",
-                rel: "canonical",
-                href: `https://www.blog.harampark.com/${this.$route.params.slug}`,
-              },
-            ],
+            //link: [
+            //  {
+            //    hid: "canonical",
+            //    rel: "canonical",
+            //    href: `https://www.blog.harampark.com/${this.$route.params.slug}`,
+            //  },
+            //],
         }
     },
 }
