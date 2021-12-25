@@ -60,11 +60,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' },
-      //{
-      //  hid: "canonical",
-      //  rel: "canonical",
-      //  href: process.env.BASE_URL,
-      //},
+      {
+        hid: "canonical",
+        rel: "canonical",
+        href: "https://blog.harampark.com",
+      },
     ],
   },
 
