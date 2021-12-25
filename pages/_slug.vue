@@ -86,12 +86,12 @@
             hid: 'og:image',
             property: 'og:image',
             // content: this.article.img
-            content: `https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/og-img.png`
+            content: `https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/thumbnail.png`
             },
             {
             hid: 'og:image:secure_url',
             property: 'og:image:secure_url',
-            content: `https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/og-img.png`
+            content: `https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/thumbnail.png`
             },
             {
             hid: 'og:image:alt',
