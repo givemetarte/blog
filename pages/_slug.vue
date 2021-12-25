@@ -65,7 +65,7 @@
             {
                 hid: 't-type',
                 name: 'twitter:card',
-                content: 'summary'
+                content: 'summary_large_image'
             },
             {
             hid: 'og-type',
