@@ -13,12 +13,7 @@ tags:
   - blog
 ---
 
-이렇게 한번 첫번째 포스팅을 올려봅니다.
-<br>
-<br>
-<br>
-
-## 이렇게 한번 써봅니다.
+흔하고 이쁘지 않은 Jekyll 블로그에서 벗어나고 싶다면, 당장 nuxt와 tailwind css로 블로그를 만들자! nuxt의 content 모듈은 블로그와 같은 정적 페이지를 만들기 쉽고, tailwind css는 홈페이지의 디자인을 쉬우면서 아름답게 만들 수 있다.
 
 <code>data</code> 허수로 하면 이렇게 만들어지구요. `kg`를 변수로 누릅니다.
 
@@ -31,16 +26,3 @@ function foo(bar) {
   return z + bar(b);
 }
 ```
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
