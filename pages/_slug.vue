@@ -14,9 +14,9 @@
       <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
     </header>
     
-    <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 selection:bg-cherrylight selection:text-gray-700" />
+    <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 selection:bg-cherrylight" />
     
-    <div class="space-x-2 flex-1 mt-3 mb-3 px-6">
+    <div class="space-x-2 flex-1 mt-7 mb-3 px-6">
       <div class="inline-flex text-gray-700 text-xs md:text-base">Tags:</div>
       <div v-for="tag in article.tags" :key="{tag}" 
               class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs mb-1">#{{ tag }}
