@@ -73,7 +73,7 @@
             {
             hid: 'og-type',
             property: 'og:type',
-            content: 'article'
+            content: 'website'
             },
             {
             hid: 'og-title',
