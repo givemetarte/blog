@@ -121,4 +121,8 @@
 .custom-text{
     word-break: keep-all;
 }
+
+.note {
+  @apply bg-lavenderblush px-4 py-1 rounded-lg font-medium;
+}
 </style>

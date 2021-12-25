@@ -42,4 +42,10 @@ Tailwind CSS는 2021년 CSS 프레임워크 중 선호도 1위를 차지했다[^
 
 Nuxt와 Tailwind CSS로 블로그를 만들기까지 대략 일주일의 시간이 걸렸다. 드디어 예쁘지 않은 Jekyll 블로그에서 예쁜 Nuxt 블로그로 탈출했다! 블로그 테마를 아름답게 만든 Peniel에게 큰 감사를 표한다 🙇🏻‍♀️ 2022년은 새로운 블로그와 함께 공부 내공을 쌓아가는 한 해 되기를 바란다.
 
+<div class="note">
+
+👀 블로그 코드 보기: [Github](https://github.com/givemetarte/blog)
+
+</div>
+
 [^1]: [CSS 2021: CSS Framework](https://2021.stateofcss.com/ko-KR/technologies/css-frameworks)
