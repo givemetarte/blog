@@ -1,6 +1,5 @@
 <template>
   <article class="relative max-w-3xl mx-auto justify-center mb-10 md:mb-10">
-    
     <header class="flex flex-col item-start text-base justify-center text-center mt-1 mb-7">
       <span class="text-base md:text-base text-gray-400 mb-2">{{ article.category }}</span>
       <!--
@@ -10,7 +9,9 @@
         </span>
       </p>
       -->
-      <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 custom-text">{{ article.title }}</h1>
+      <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 custom-text">
+        {{ article.title }}
+      </h1>
       <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
     </header>
     
@@ -112,6 +113,31 @@
               },
             ],
         }
+    },
+    jsonld() {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://blog.harampark.com/${this.$route.params.slug}`,
+        },
+        headline: this.article.title,
+        description: this.article.description,
+        image: 'https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/thumbnail.png',
+        author: {
+          '@type': 'Person',
+          name: 'Haram Park',
+          email: 'mail@harampark.com',
+          nationality: {
+            '@type': 'Country',
+            name: 'South Korea'
+          }
+        },
+        datePublished: this.article.datetime,
+        inLanguage: 'ko',
+        keywords: this.article.tags
+      }
     },
 }
 

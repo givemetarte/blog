@@ -1,6 +1,6 @@
 ---
 title: 그래프 데이터베이스 Blazegraph, Virtuoso, GraphDB 설치와 데이터 업로드
-description: 오픈소스 그래프 데이터베이스 blazegraph, graphdb, virtuoso의 오픈소스 버전을 설치하고, 데이터를 업로드 해보자. 더불어 `SPARQL`로 업로드된 데이터를 질의해보자.
+description: 오픈소스 그래프 데이터베이스 blazegraph, graphdb, virtuoso의 오픈소스 버전을 설치하고, 데이터를 업로드 해보자. 더불어 업로드된 데이터를 SPARQL로 질의해보자.
 slug: opensource-graphdb-review
 author: 박하람
 category: Knowledge Graph
