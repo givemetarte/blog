@@ -25,23 +25,6 @@ export default {
       // Open Graph
       // Test on: https://developers.facebook.com/tools/debug/
       { hid: 'og:site_name', property: 'og:site_name', content: "Haram's Blog" },
-      { hid: 'og:type', property: 'og:type', content: 'Blog' },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://www.blog.harampark.com'
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: "Haram's Blog"
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content:
-          "👩🏻‍💻 박하람의 기술 블로그 | Haram's Tech Blog"
-      },
       {
         hid: 'og:image',
         property: 'og:image',
@@ -57,14 +40,6 @@ export default {
         property: 'og:image:alt',
         content: 'Logo Image'
       }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' },
-      {
-        hid: "canonical",
-        rel: "canonical",
-        href: "https://blog.harampark.com",
-      },
     ],
   },
 
