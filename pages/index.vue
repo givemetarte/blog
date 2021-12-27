@@ -64,6 +64,7 @@
     <div class="px-5 pt-10">
       <nuxt-link to='knowledge-graph'><span class="tag-btn">#<span class="text-gray-600 text-sm">지식그래프</span></span></nuxt-link>
       <nuxt-link to='data'><span class="tag-btn">#<span class="text-gray-600 text-sm">데이터</span></span></nuxt-link>
+      <nuxt-link to='frontend-web'><span class="tag-btn">#<span class="text-gray-600 text-sm">웹개발</span></span></nuxt-link>
       <nuxt-link to='something'><span class="tag-btn">#<span class="text-gray-600 text-sm">생각거리</span></span></nuxt-link>
     </div>
 

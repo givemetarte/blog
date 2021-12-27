@@ -1,8 +1,8 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <div class="px-5">
-        <div class="pt-10 md:pt-12 text-lg md:text-2xl text-gray-700 font-semibold mb-2">생각거리</div>
-        <div class="text-gray-600 font-normal text-sm md:text-base">잡다한 주제를 담은 글 모음입니다.</div>
+        <div class="pt-10 md:pt-12 text-lg md:text-2xl text-gray-700 font-semibold mb-2">웹 개발</div>
+        <div class="text-gray-600 font-normal text-sm md:text-base">웹 개발 주제를 담은 글 모음입니다.</div>
     </div>
 
     <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
@@ -31,7 +31,7 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
-      .where({category: 'Daily Life'})
+      .where({category: 'Front-End Web'})
       .sortBy("datetime", "desc")
       .fetch();
     return {

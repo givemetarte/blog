@@ -1,8 +1,8 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <div class="px-5">
-        <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-semibold mb-2">데이터</div>
-        <div class="text-gray-600 font-normal text-sm md:text-base">데이터를 담은 글 모음입니다.</div>
+        <div class="pt-10 md:pt-12 text-lg md:text-2xl text-gray-700 font-semibold mb-2">데이터</div>
+        <div class="text-gray-600 font-normal text-sm md:text-base">데이터 주제를 담은 글 모음입니다.</div>
     </div>
 
     <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">

@@ -1,13 +1,14 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <div class="px-5">
-        <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-semibold mb-2">모든 글보기</div>
+        <div class="pt-10 md:pt-12 text-lg md:text-2xl text-gray-700 font-semibold mb-2">모든 글보기</div>
         <div class="text-gray-600 font-normal text-sm md:text-base">블로그의 모든 글 모음입니다. 주제별로 글을 보고 싶다면 아래 태그를 선택해주세요.</div>
     </div>
 
     <div class="px-5 pt-10">
       <nuxt-link to='knowledge-graph'><span class="tag-btn">#<span class="text-gray-600 text-sm">지식그래프</span></span></nuxt-link>
       <nuxt-link to='data'><span class="tag-btn">#<span class="text-gray-600 text-sm">데이터</span></span></nuxt-link>
+      <nuxt-link to='frontend-web'><span class="tag-btn">#<span class="text-gray-600 text-sm">웹개발</span></span></nuxt-link>
       <nuxt-link to='something'><span class="tag-btn">#<span class="text-gray-600 text-sm">생각거리</span></span></nuxt-link>
     </div>
 
