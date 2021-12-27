@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <div class="px-5">
-        <div class="pt-10 md:pt-12 text-lg md:text-2xl text-gray-700 font-semibold mb-2">지식그래프</div>
+        <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">지식그래프</div>
         <div class="text-gray-600 font-normal text-sm md:text-base">지식그래프 주제를 담은 글 모음입니다.</div>
     </div>
 
