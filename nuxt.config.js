@@ -41,6 +41,9 @@ export default {
         content: 'Logo Image'
       }
     ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' },
+    ],
   },
 
   loading: { color: '#c06c84' },
