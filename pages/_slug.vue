@@ -152,4 +152,13 @@
 .note {
   @apply bg-lavenderblush px-4 py-1 rounded-lg font-medium;
 }
+
+.img {
+  @apply mt-6 mb-8 rounded-xl;
+}
+
+.line {
+  @apply underline-offset-2 decoration-cherry decoration-wavy;
+}
+
 </style>
