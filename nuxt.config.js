@@ -13,7 +13,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Haram Blog' },
+      { hid: 'description', name: 'description', content: '박하람의 블로그입니다. 파워 블로거👀가 되는 그날까지. 주로 지식그래프와 관련된 글을 씁니다.' },
       { name: 'format-detection', content: 'telephone=no' },
       // Twitter
       // Test on: https://cards-dev.twitter.com/validator
