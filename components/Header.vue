@@ -7,15 +7,15 @@
                 </nuxt-link>
             </div>
             <div>
-                <ul class="flex space-x-1 text-base items-center">
+                <ul class="flex space-x-2 text-base items-center">
                     <li>
                         <div class="py-1 px-2 rounded-lg">
-                            <nuxt-link to="blog" class="text-gray-700 text-sm hover:text-cherry">Blog</nuxt-link>
+                            <nuxt-link :to="{path: '/blog'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">Blog</nuxt-link>
                         </div>
                     </li>
                     <li>
                         <div class="py-1 px-2 rounded-lg">
-                            <nuxt-link to="about" class="text-gray-700 text-sm hover:text-cherry">About</nuxt-link>
+                            <nuxt-link :to="{path: '/about'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">About</nuxt-link>
                         </div>
                     </li>
                 </ul>

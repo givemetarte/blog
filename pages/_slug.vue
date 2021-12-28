@@ -129,7 +129,7 @@
           '@type': 'Person',
           name: 'Haram Park',
           email: 'mail@harampark.com',
-          url: 'https://www.harampark.com',
+          url: 'https://www.blog.harampark.com/about',
           nationality: {
             '@type': 'Country',
             name: 'South Korea'
