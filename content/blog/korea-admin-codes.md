@@ -4,7 +4,7 @@ description: 대한민국의 행정구역코드는 행안부의 행정동코드,
 slug: korea-admin-codes
 author: 박하람
 category: Data
-datetime: 2021. 12. 25.
+datetime: 2021. 12. 28.
 language: Korean
 featured: Featured
 tags:
@@ -15,4 +15,4 @@ tags:
   - 통계청
 ---
 
-행정구역코드를 알아보자!
+대한민국의 행정구역코드는 행정안전부의 행정동코드와 법정동코드, 통계청의 행정구역코드가 있다. 행정구역의 데이터를 모델링할 때 골머리를 앓았던 부분이 바로 코드 체계다.

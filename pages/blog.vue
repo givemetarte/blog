@@ -6,10 +6,10 @@
     </div>
 
     <div class="px-5 pt-10">
-      <nuxt-link to='knowledge-graph'><span class="tag-btn">#<span class="text-gray-600 text-sm">지식그래프</span></span></nuxt-link>
-      <nuxt-link to='data'><span class="tag-btn">#<span class="text-gray-600 text-sm">데이터</span></span></nuxt-link>
-      <nuxt-link to='frontend-web'><span class="tag-btn">#<span class="text-gray-600 text-sm">웹개발</span></span></nuxt-link>
-      <nuxt-link to='something'><span class="tag-btn">#<span class="text-gray-600 text-sm">생각거리</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/knowledge-graph'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">지식그래프</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/data'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">데이터</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/frontend-web'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">웹개발</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/something'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">생각거리</span></span></nuxt-link>
     </div>
 
     <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
