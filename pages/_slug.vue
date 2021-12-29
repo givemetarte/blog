@@ -150,7 +150,7 @@
 }
 
 .note {
-  @apply bg-lavenderblush px-4 py-1 rounded-lg font-medium;
+  @apply bg-lavenderblush px-6 py-1 rounded-lg font-medium;
 }
 
 .img {
