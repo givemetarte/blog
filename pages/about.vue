@@ -12,7 +12,7 @@
                 </div>
                 <div class="w-2/3 py-8 pl-4">
                     <div class="text-gray-600 font-semibold text-lg md:mb-8">Haram Park | 박하람</div>
-                    <div class="mt-5 text-gray-600 font-normal text-base keepall">대학원에서 지식공학을 공부하고 있습니다. 지식그래프, 데이터, 인공지능에 관심이 많습니다. 게시글과 관련된 이야기는 댓글로, 구체적인 코드는 <a href="https://github.com/givemetarte" class="highlight-xs">github</a>에서, 연락은 <a href="malito:mail@harampark.com" class="highlight-xs">email</a>로 해주세요.</div>
+                    <div class="mt-5 text-gray-600 font-normal text-base keepall">대학원에서 지식공학을 공부하고 있습니다. 지식그래프, 데이터, 인공지능에 관심이 많습니다. 게시글과 관련된 이야기는 댓글로, 구체적인 코드는 <a href="https://github.com/givemetarte" target="_blank" class="highlight-xs">github</a>에서, 연락은 <a href="malito:mail@harampark.com" class="highlight-xs">email</a>로 해주세요.</div>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="w-4/5 md:w-2/3 text-gray-600 font-normal text-sm">
                     <div class="text-gray-600 font-medium text-base text-center keepall">Haram Park</div>
-                    <div class="text-sm text-center mt-3">대학원에서 지식공학을 공부하고 있습니다. 지식그래프, 데이터, 인공지능에 관심이 많습니다. 게시글과 관련된 이야기는 댓글로, 구체적인 코드는 <a href="https://github.com/givemetarte" class="highlight-xs">github</a>에서, 연락은 <a href="malito:mail@harampark.com" class="highlight-xs">email</a>로 해주세요.</div>
+                    <div class="text-sm text-center mt-3">대학원에서 지식공학을 공부하고 있습니다. 지식그래프, 데이터, 인공지능에 관심이 많습니다. 게시글과 관련된 이야기는 댓글로, 구체적인 코드는 <a href="https://github.com/givemetarte" class="highlight-xs">github</a>에서, 연락은 <a href="malito:mail@harampark.com" target="_blank" class="highlight-xs">email</a>로 해주세요.</div>
                 </div>
             </div>
         </div>
