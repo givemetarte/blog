@@ -22,8 +22,10 @@ tags:
 프로젝트에 [nuxt-jsonld](https://www.npmjs.com/package/nuxt-jsonld) 플러그인을 설치한다. `npm` 또는 `yarn` 중 하나를 선택하여 설치하면 된다.
 
 ```bash
+
 $ npm install nuxt-jsonld
 $ yarn add nuxt-jsonld
+
 ```
 
 `plugins` 폴더를 생성하고, 그 안에 `jsonld.js` 파일을 만든다. `nuxt.config.js` 파일의 `plugins` 항목에 해당 모듈을 추가하는 것도 잊지말자.
@@ -38,11 +40,13 @@ Vue.use(NuxtJsonld)
 ```
 
 ```javascript
+
 // nuxt.config.js
 
 plugins: [
   '@/plugins/jsonld.js',
 ],
+
 ```
 
 ### JSON-LD로 표현하기
