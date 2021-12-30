@@ -8,7 +8,8 @@ datetime: 2021. 12. 24.
 language: Korean
 featured: Featured
 tags:
-  - knowledge_graph
+  - 지식그래프
+  - 트리플스토어
   - blazegraph
   - virtuoso
   - graphdb
