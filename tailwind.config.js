@@ -6,6 +6,7 @@ module.exports = {
         cherry: '#c06c84',
         cherrylight: '#cf90a2',
         lavenderblush: '#F9F0F3',
+        beigelight: '#F5F2F0',
       },
       keyframes: {
         wiggle: {

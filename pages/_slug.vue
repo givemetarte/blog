@@ -170,6 +170,6 @@ code::after {
 }
 
 code {
-  @apply px-1 py-1 bg-stone-100 rounded-md;
+  @apply px-1 py-1 bg-beigelight rounded-md;
 }
 </style>
