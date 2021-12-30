@@ -161,4 +161,15 @@
   @apply underline-offset-2 decoration-cherry decoration-wavy;
 }
 
+code::before {
+  content: none !important;
+}
+
+code::after {
+  content: none !important;
+}
+
+code {
+  @apply px-1 py-1 bg-stone-100 rounded-md;
+}
 </style>
