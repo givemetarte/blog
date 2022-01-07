@@ -22,6 +22,7 @@ tags:
 프로젝트에 [nuxt-jsonld](https://www.npmjs.com/package/nuxt-jsonld) 플러그인을 설치한다. `npm` 또는 `yarn` 중 하나를 선택하여 설치하면 된다.
 
 ```bash
+
 $ npm install nuxt-jsonld
 $ yarn add nuxt-jsonld
 ```

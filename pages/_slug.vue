@@ -56,49 +56,15 @@
     head() {
         return {
             title: this.article.title,
-            description: this.article.description,
             htmlAttrs: {
             lang: 'ko'
             },
             meta: [
-            { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            {
-                hid: 't-type',
-                name: 'twitter:card',
-                content: 'summary'
-            },
-            {
-            hid: 'og-type',
-            property: 'og:type',
-            content: 'website'
-            },
-            {
-            hid: 'og:title',
-            property: 'og:title',
-            content: this.article.title
-            },
-            {
-            hid: 'og:description',
-            property: 'og:description',
-            content: this.article.description
-            },
-            {
-            hid: 'og:image',
-            property: 'og:image',
-            // content: this.article.img
-            content: `https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/thumbnail.png`
-            },
-            {
-            hid: 'og:image:secure_url',
-            property: 'og:image:secure_url',
-            content: `https://raw.githubusercontent.com/givemetarte/blog/main/assets/images/thumbnail.png`
-            },
-            {
-            hid: 'og:image:alt',
-            property: 'og:image:alt',
-            content: this.article.title
-            },
+            { name: "author", content: "Haram Park" },
+            { name: "description", property: "og:description", content: this.article.description, hid: "description"},
+            { hid: 't-type', name: 'twitter:card', content: 'summary' },
+            { hid: 'og-type', property: 'og:type', content: 'website' },
+            { property: 'og:title', content: this.article.title },
             {
             hid: 'og:url',
             name: 'og:url',
