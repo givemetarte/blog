@@ -10,7 +10,7 @@
                 <ul class="flex space-x-2 text-base items-center">
                     <li>
                         <div class="py-1 px-2 rounded-lg">
-                            <nuxt-link :to="{path: '/blog'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">Blog</nuxt-link>
+                            <nuxt-link :to="{path: '/all-post'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">Blog</nuxt-link>
                         </div>
                     </li>
                     <li>

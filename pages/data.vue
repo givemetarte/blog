@@ -7,7 +7,7 @@
 
     <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
         <div class="px-5 md:px-6 group" v-for="article of articles" :key="article">
-          <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
+          <nuxt-link :to='`/blog/${article.slug}`'>
               <div class="article-inner flex justify-between border-t py-6 border-gray-200">
                 <div class="w-full md:w-5/6">
                     <p class="mb-1 md:mb-1 text-sm md:text-sm font-medium text-cherry group-hover:text-gray-400">{{article.category}}</p>

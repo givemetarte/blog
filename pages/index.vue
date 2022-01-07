@@ -21,7 +21,7 @@
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0 pt-5">
       
       <div v-for="ftarticle of featured" :key="ftarticle" class="nthz hidden md:block hover:drop-shadow-lg">
-        <nuxt-link :to='`${ftarticle.slug}`'>
+        <nuxt-link :to='`/blog/${ftarticle.slug}`'>
           <div class="h-52 md:h-80">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
@@ -38,7 +38,7 @@
       </div>
 
       <div v-for="featarticle of featuredone" :key="featarticle" class="block md:hidden hover:drop-shadow-lg">
-        <nuxt-link :to='`${featarticle.slug}`'>
+        <nuxt-link :to='`/blog/${featarticle.slug}`'>
           <div class="back-purple rounded-lg h-60 py-5 px-6 relative">
             <div>
               <p class="text-xs text-gray-500">{{featarticle.category}}</p>
@@ -70,7 +70,7 @@
 
     <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-5 md:mt-6 mb-8 md:mb-12">
         <div class="px-5 md:px-6 group" v-for="article of articles" :key="article">
-          <nuxt-link :to="{ name: 'slug', params: { slug: article.slug } }">
+          <nuxt-link :to='`/blog/${article.slug}`'>
               <div class="flex justify-between border-t py-6 border-gray-200">
                 <div class="w-full md:w-5/6">
                     <p class="mb-1 md:mb-1 text-sm md:text-sm font-medium text-cherry group-hover:text-gray-400">{{article.category}}</p>
