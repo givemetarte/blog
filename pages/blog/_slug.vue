@@ -36,7 +36,7 @@
 
         const [prev, next] = await $content('blog')
           .only(['title', 'slug'])
-          .sortBy("datetime", "desc")
+          .sortBy("datetime", "asc")
           .surround(params.slug)
           .fetch()
         
