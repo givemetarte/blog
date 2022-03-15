@@ -1,5 +1,3 @@
-import getRoutes from "./utils/getRoutes";
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -91,8 +89,19 @@ export default {
   // Generate sitemap
   sitemap: {
     hostname: 'https://www.blog.harampark.com',
-    routes() {
-      return getRoutes();
+    defaults: {
+      changefreq: "daily",
+      priority: 1,
+      lastmod: new Date(),
+    },
+  },
+
+  generate: {
+    async routes() {
+      const { $content } = require("@nuxt/content");
+      const files = await $content({ deep: true}).only(["path"]).fetch();
+
+      return files.map((file) => (file.path === "/index" ? "/" : file.path));
     },
   },
 }
