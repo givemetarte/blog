@@ -10,8 +10,12 @@
 export default {
   name: 'Default',
 }
+
 </script>
 
 <style>
 @import url(../assets/css/fonts.css);
+/* body {
+  background-color: #232741;
+} */
 </style>
