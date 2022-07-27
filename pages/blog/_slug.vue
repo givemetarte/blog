@@ -9,7 +9,7 @@
         </span>
       </p>
       -->
-      <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 custom-text">
+      <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 break-all">
         {{ article.title }}
       </h1>
       <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
