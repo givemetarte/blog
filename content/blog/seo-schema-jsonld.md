@@ -3,7 +3,7 @@ title: 구글 SEO를 위한 Schema.org 마크업 추가하기
 description: 검색 엔진 최적화를 위해 구글이 사용하는 마크업 언어 schema.org를 사용해보자. JSON-LD 형식으로 웹페이지의 데이터를 쉽게 표현해보자.
 slug: seo-schema-jsonld
 author: 박하람
-category: Front-End Web
+category: Web Development
 datetime: 2021. 12. 30.
 language: Korean
 featured: Featured
