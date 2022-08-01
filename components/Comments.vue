@@ -1,4 +1,5 @@
 <template>
+  <div id="utterances"></div>
 </template>
 
 <script>
@@ -6,9 +7,9 @@ export default {
   mounted() {
     const scriptTag = document.createElement('SCRIPT')
     scriptTag.setAttribute('src', 'https://utteranc.es/client.js')
-    scriptTag.setAttribute('repo', 'givemetarte/blog-comments')
+    scriptTag.setAttribute('repo', 'givemetarte/blog-comment')
     scriptTag.setAttribute('issue-term', 'pathname')
-    scriptTag.setAttribute('label', '✨💬✨')
+    scriptTag.setAttribute('label', 'Comment')
     scriptTag.setAttribute('theme', 'github-light')
     scriptTag.setAttribute('crossorigin', 'anonymous')
     scriptTag.setAttribute('async', 'async')
@@ -16,6 +17,7 @@ export default {
   },
 }
 </script>
+
 
 <style>
 .utterances {
