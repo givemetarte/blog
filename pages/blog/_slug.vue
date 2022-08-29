@@ -75,7 +75,7 @@
               {
                 hid: "canonical",
                 rel: "canonical",
-                href: `https://blog.harampark.com/${this.$route.params.slug}`,
+                href: `https://blog.harampark.com/blog/${this.$route.params.slug}`,
               },
             ],
         }
