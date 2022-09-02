@@ -1,6 +1,6 @@
 ---
 title: 파이썬으로 대용량 CSV 파일 열기 (feat. pandas와 dask)
-description: 건축물대장의 주택가격 txt 파일은 자그마치 26G다. 판다스로 열면, 30분 걸려도 메모리 에러로 안 열리는 파일을 dask로 1초 만에 열어보자.
+description: 건축물대장의 주택가격 txt 파일은 자그마치 26G다. 판다스로 열면, 30분 걸려도 메모리 에러로 안 열리는 파일을 dask로 1초 만에 열린다!
 slug: dask-read-csv
 author: 박하람
 category: Data
