@@ -80,28 +80,22 @@ export default {
     "@nuxtjs/sitemap",
   ],
 
+  sitemap: {
+    hostname: 'https://blog.harampark.com',
+    routes: [
+      '/blog/blazegraph-named-graph/',
+      '/blog/dask-read-csv/',
+      '/blog/korea-admin-codes/',
+      '/blog/nuxt-tailwind-blog/',
+      '/blog/opensource-graphdb-review/',
+      '/blog/pymysql-encoding-error/',
+      '/blog/seo-schema-jsonld/',
+    ]
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-
-  // Generate sitemap
-  sitemap: {
-    hostname: 'https://www.blog.harampark.com',
-    defaults: {
-      changefreq: "daily",
-      priority: 1,
-      lastmod: new Date(),
-    },
-  },
-
-  generate: {
-    async routes() {
-      const { $content } = require("@nuxt/content");
-      const files = await $content({ deep: true}).only(["path"]).fetch();
-
-      return files.map((file) => (file.path === "/index" ? "/" : file.path));
-    },
-  },
 }
