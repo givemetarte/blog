@@ -90,6 +90,8 @@ export default {
       '/blog/opensource-graphdb-review/',
       '/blog/pymysql-encoding-error/',
       '/blog/seo-schema-jsonld/',
+      '/blog/rdflib-tutorial-dcat-1',
+      '/blog/rdflib-tutorial-dcat-2',
     ]
   },
 
