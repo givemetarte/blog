@@ -153,4 +153,4 @@ dcat_id = "http://data.datahub.kr/id/dcat/"
 
 [^1]: `DCAT` 버전 3의 첫번째 예시는 `dcat:Catalog`가 여러 개의 `dcat:Dataset`를 포괄한다. [링크](https://www.w3.org/TR/vocab-dcat-3/#ex-catalog)
 [^2]: 분류체계는 `dcat:theme`으로 표현할 수 있지만, 보통은 URI를 가진 통제어휘를 사용한다. 공공데이터포털은 URI가 부여된 명확한 분류체계가 없으므로 표현하지 않는다.
-[^3]: 이 함수는 우리 연구실의 [멈멈 선생님](https://github.com/mumbb)께서 만들어주셨다. Thx 🤍
+[^3]: 이 함수는 우리 연구실의 [솜솜 선생님](https://github.com/shinysong)과 [멈멈 선생님](https://github.com/mumbb)께서 만들어주셨다. Thx 🤍

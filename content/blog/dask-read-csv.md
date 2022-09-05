@@ -74,7 +74,7 @@ busan_price_pdf = price_df.compute()
 # save csv
 busan_price_pdf.to_csv("data/refined-data/busan-price.csv", encoding="utf-8", index=False)
 ```
-여기까지 약 43분 27초가 소요되었다. `pandas`의 데이터프레임으로 열 수 없었지만, `dask`로 무사히 열고 전처리 할 수 있다!
+데이터 전처리부터 `pandas`의 데이터프레임으로 변환하는 데까지 약 43분 27초가 소요되었다. `pandas`의 데이터프레임으로 열 수 없었지만, `dask`로 무사히 열고 전처리 할 수 있다!
 
 ### 마지막으로 
 
