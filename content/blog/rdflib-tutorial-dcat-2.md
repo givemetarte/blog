@@ -38,7 +38,7 @@ g.bind("dct", DCTERMS)
 | :--: | :--: | :--: |
 | `dcat:Dataset` | ds-{목록키} | http://data.datahub.kr/id/dcat/ds-15000000 |
 | `dcat:Distribution` | dt-{목록키} | http://data.datahub.kr/id/dcat/dt-15000000 |
-| `koor:Organization` | {기관코드} | http://data.datahub.kr/id/organization/56700005670000 |
+| `koor:Organization` | {기관코드} | http://data.datahub.kr/id/organization/5670000 |
 
 ```py
 for idx, row in tqdm(data.iterrows(), total=data.shape[0]):
