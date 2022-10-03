@@ -82,6 +82,7 @@ export default {
 
   sitemap: {
     hostname: 'https://blog.harampark.com',
+    gzip: true,
     routes: [
       '/blog/blazegraph-named-graph/',
       '/blog/dask-read-csv/',
