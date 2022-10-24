@@ -93,6 +93,7 @@ export default {
       '/blog/seo-schema-jsonld/',
       '/blog/rdflib-tutorial-dcat-1',
       '/blog/rdflib-tutorial-dcat-2',
+      '/blog/python-sparql-endpoint',
     ]
   },
 
