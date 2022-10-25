@@ -25,7 +25,7 @@
           <div class="h-52 md:h-80">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
-              <h3 class="text-gray-700 text-lg font-bold break-all mb-2">{{ ftarticle.title }}</h3>
+              <h3 class="text-gray-700 text-lg font-bold break-all mb-2 keepall">{{ ftarticle.title }}</h3>
               <!--
               <p class="text-sm md:text-sm text-gray-500 mb-1">{{ ftarticle.description }}</p>
               -->
@@ -42,7 +42,7 @@
           <div class="back-purple rounded-lg h-60 py-5 px-6 relative">
             <div>
               <p class="text-xs text-gray-500">{{featarticle.category}}</p>
-              <p class="text-base text-gray-700 font-bold pt-1 mb-2">{{featarticle.title}}</p>
+              <p class="text-base text-gray-700 font-bold pt-1 mb-2 keepall">{{featarticle.title}}</p>
               <!--
               <p class="text-gray-600 pt-1 ftmore mb-1">{{featarticle.description}}</p>
               -->
@@ -146,7 +146,6 @@ export default {
     border-radius: 5%;
     overflow: hidden;
 }
-
 .back-purple {
   background-color: #C4C9FE;
 }
