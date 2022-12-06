@@ -17,7 +17,7 @@
           <ul class="flex flex-col w-1/5 fixed">
             <li class="font-medium mb-2 text-gray-700">Table of Contents</li>
             <li v-for="link of article.toc" :key="link.id" class="mb-2 text-gray-500 hover:text-gray-700">
-              <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+              <a :href="`#${link.id}`">{{ link.text }}</a>
             </li>
           </ul>
         </div>
