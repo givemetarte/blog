@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-5xl mx-auto">
 
     <!--블로그 소개-->
     <div class="pt-16">
@@ -20,7 +20,7 @@
 
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0 pt-5">
       
-      <div v-for="ftarticle of featured" :key="ftarticle" class="nthz hidden md:block hover:drop-shadow-lg">
+      <div v-for="(ftarticle, idx) of featured" :key="idx" class="nthz hidden md:block hover:drop-shadow-lg">
         <nuxt-link :to='`/blog/${ftarticle.slug}`'>
           <div class="h-52 md:h-80">
             <div class="p-5 z-30">
@@ -37,7 +37,7 @@
         </nuxt-link>
       </div>
 
-      <div v-for="featarticle of featuredone" :key="featarticle" class="block md:hidden hover:drop-shadow-lg">
+      <div v-for="(featarticle, idx) of featuredone" :key="idx" class="block md:hidden hover:drop-shadow-lg">
         <nuxt-link :to='`/blog/${featarticle.slug}`'>
           <div class="back-purple rounded-lg h-60 py-5 px-6 relative">
             <div>
@@ -68,8 +68,8 @@
       <nuxt-link :to="{path: '/something'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">생각거리</span></span></nuxt-link>
     </div>
 
-    <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-5 md:mt-6 mb-8 md:mb-12">
-        <div class="px-5 md:px-6 group" v-for="article of articles" :key="article">
+    <div class="max-w-5xl grid grid-cols-1 md:grid-cols-1 mt-5 md:mt-6 mb-8 md:mb-12">
+        <div v-for="(article, idx) of articles" :key="idx" class="px-5 md:px-6 group">
           <nuxt-link :to='`/blog/${article.slug}`'>
               <div class="flex justify-between border-t py-6 border-gray-200">
                 <div class="w-full md:w-5/6">

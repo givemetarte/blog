@@ -1,31 +1,43 @@
 <template>
-  <article class="relative max-w-3xl mx-auto justify-center mb-10 md:mb-10">
+
+  <article class="relative max-w-5xl mx-auto justify-center mb-10 md:mb-10">
     <header class="flex flex-col item-start text-base justify-center text-center mt-1 mb-7">
       <span class="text-base md:text-base text-gray-400 mb-2">{{ article.category }}</span>
-      <!--
-      <p class="text-sm md:text-base text-gray-400 text-center mb-2">
-        <span class="py-1 px-2 rounded-lg bg-gray-100 hover:drop-shadow">
-          {{ article.category }}
-        </span>
-      </p>
-      -->
+
       <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 keepall">
         {{ article.title }}
       </h1>
       <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
     </header>
-    
-    <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 selection:bg-cherrylight" />
+
+    <div class="hidden lg:block w-full">
+      <div class="flex relative">
+        <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 selection:bg-cherrylight" />
+        <div>
+          <ul class="flex flex-col w-1/5 fixed">
+            <li class="font-medium mb-2 text-gray-700">Table of Contents</li>
+            <li v-for="link of article.toc" :key="link.id" class="mb-2 text-gray-500 hover:text-gray-700">
+              <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="block lg:hidden">
+      <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 selection:bg-cherrylight" />
+    </div>
     
     <div class="space-x-2 flex-1 mt-7 mb-3 px-6">
       <div class="inline-flex text-gray-700 text-xs md:text-base">Tags:</div>
-      <div v-for="tag in article.tags" :key="{tag}" 
+      <div v-for="(tag, idx) in article.tags" :key="idx" 
               class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs mb-1">#{{ tag }}
       </div>
     </div>
     <Comments />
     <Prevnext :prev="prev" :next="next" />
   </article>
+
 </template>
 
 <script>
@@ -51,7 +63,7 @@
     methods: {
         formatDate(date){
             return new Date(date).toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'})
-        }
+        },
     },
     head() {
         return {
