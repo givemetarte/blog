@@ -1,16 +1,23 @@
 <template>
 
-  <article class="relative max-w-5xl mx-auto justify-center mb-10 md:mb-10">
-    <header class="flex flex-col item-start text-base justify-center text-center mt-1 mb-7">
+  <article class="relative max-w-4xl mx-auto justify-center mb-10 md:mb-10">
+    <header class="flex flex-col item-start text-base justify-center text-center mt-1 mb-7 md:mb-16">
       <span class="text-base md:text-base text-gray-400 mb-2">{{ article.category }}</span>
 
-      <h1 class="px-5 md:px-0 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 keepall">
+      <h1 class="px-5 md:px-0 md:pt-10 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 keepall">
         {{ article.title }}
       </h1>
       <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
     </header>
 
     <div class="hidden lg:block w-full">
+      <div>
+        <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 selection:bg-cherrylight" />
+      </div>
+    </div>
+
+    <!-- TOC -->
+    <!-- <div class="hidden lg:block w-full">
       <div class="flex relative">
         <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 selection:bg-cherrylight" />
         <div>
@@ -22,7 +29,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="block lg:hidden">
       <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 selection:bg-cherrylight" />
