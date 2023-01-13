@@ -12,7 +12,7 @@
 
     <div class="hidden lg:block w-full">
       <div>
-        <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 selection:bg-cherrylight" />
+        <nuxt-content :document="article" class="prose max-w-4xl keepall px-6 selection:bg-cherrylight" />
       </div>
     </div>
 
@@ -32,7 +32,7 @@
     </div> -->
 
     <div class="block lg:hidden">
-      <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 selection:bg-cherrylight" />
+      <nuxt-content :document="article" class="prose max-w-4xl keepall px-6 selection:bg-cherrylight" />
     </div>
     
     <div class="space-x-2 flex-1 mt-7 mb-3 px-6">
@@ -130,10 +130,6 @@
 </script>
 
 <style scpoed>
-.custom-text{
-    word-break: keep-all;
-}
-
 .note {
   @apply bg-lavenderblush px-6 py-1 rounded-lg font-medium;
 }
@@ -146,24 +142,12 @@
   @apply underline-offset-2 decoration-cherry decoration-wavy;
 }
 
-.maybe-class-name {
-  color: #7c7c7c;
-}
-
-code > #text {
-  color: #7c7c7c;
-}
-
 code::before {
   content: none !important;
 }
 
 code::after {
   content: none !important;
-}
-
-code {
-  @apply px-1 py-1 rounded-md;
 }
 
 .keepall{

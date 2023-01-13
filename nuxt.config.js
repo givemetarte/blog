@@ -105,7 +105,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-atom-dark.css'
+        theme: 'prism-themes/themes/prism-darcula.css'
       }
     },
     liveEdit: false
