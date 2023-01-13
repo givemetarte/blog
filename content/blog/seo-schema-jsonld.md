@@ -29,7 +29,7 @@ $ yarn add nuxt-jsonld
 
 `plugins` 폴더를 생성하고, 그 안에 `jsonld.js` 파일을 만든다. `nuxt.config.js` 파일의 `plugins` 항목에 해당 모듈을 추가하는 것도 잊지말자.
 
-```javascript
+```js
 // ~/plugins/jsonld.js
 
 import Vue from 'vue'
