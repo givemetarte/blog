@@ -146,6 +146,10 @@
   @apply underline-offset-2 decoration-cherry decoration-wavy;
 }
 
+.maybe-class-name {
+  color: #7c7c7c;
+}
+
 code::before {
   content: none !important;
 }
