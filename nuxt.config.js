@@ -105,7 +105,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-light.css'
+        theme: 'prism-themes/themes/prism-one-light.css'
       }
     },
     liveEdit: false
