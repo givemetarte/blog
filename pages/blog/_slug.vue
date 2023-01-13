@@ -150,6 +150,10 @@
   color: #7c7c7c;
 }
 
+code > #text {
+  color: #7c7c7c;
+}
+
 code::before {
   content: none !important;
 }
