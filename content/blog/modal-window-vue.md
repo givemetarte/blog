@@ -34,10 +34,9 @@ Vue3 버전으로 웹 서비스를 베타로 운영하고 있다. 사용자가 �
 
 이 팝업창은 처음 웹 서비스에 접속하는 홈페이지에 띄울 것이다. `views` 폴더 내부에 있는 `index.vue`에 컴포넌트를 등록한 후, 인덱스 페이지의 가장 상단에 해당 컴포넌트를 추가한다. 완성된 팝업창은 다음 그림과 같다.
 
-```{vue}
+```vue
 <template>
   <div class="w-full bg-white">
-
     <!-- popup window -->
     <PopUpView v-if="this.openModal == true" />
     ...
@@ -54,14 +53,13 @@ export default {
   ...
 }
 </script>
-
 ```
 
 ### 3단계: 이벤트 구현하기
 
 사용자가 팝업창의 닫기(X)를 클릭하면, 팝업창이 닫히는 것을 구현해보자. `v-if`로 조건을 걸어주고, `@click` 이벤트로 조건을 바꿔주면 된다. `v-if`의 조건은 `openModal`이란 변수가 참일 때만 나타나도록 설정하고, 인덱스의 `data`에 `openModal`을 정의해준다. 인덱스 페이지가 처음 로딩될 때 나타나도록 디폴트 값을 `true`로 설정했다.
 
-```{vue}
+```vue
 <script>
 import PopUpView from '@/components/PopUpView.vue'
 export default {
@@ -82,35 +80,48 @@ export default {
 
 먼저 팝업창 컴포넌트에서 X 표시인 버튼에 `@click` 이벤트를 추가한다. `closeModal` 이벤트는 `methods`에 추가한다. `@click="closeModal`은 `sendClose`라는 이름으로 부모 페이지에 `false`라는 신호를 보낸다.
 
-```{vue}
+```vue
 <template>
   ...
-  <button type="button" @click="closeModal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
-    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+  <button
+    type="button"
+    @click="closeModal"
+    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-5 h-5"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+      ></path>
     </svg>
   </button>
   ...
 </template>
 
 <script>
-export default ({
-    name: "PopUpView",
-    methods: {
-      closeModal() {
-          this.$emit("sendClose", false)
-      },
-    }
-})
+export default {
+  name: 'PopUpView',
+  methods: {
+    closeModal() {
+      this.$emit('sendClose', false)
+    },
+  },
+}
 </script>
 ```
 
 다시 인덱스 페이지로 돌아와서, `@sendClose="closeModalView"`를 `v-if` 옆에 추가해준다. 여기서 @ 다음의 변수는 자식 컴포넌트에서 `this.$emit("sendClose", false)`의 `sendClose`와 동일해야 한다. `closeModalView`는 `methods`에 추가하고, 데이터를 전송받았을 때 구현될 이벤트를 정의한다. `sendClose`는 `false`라는 데이터를 전달했으므로, `closeModalView(data)`에서 `data`는 `false`로 정의된다. 여기서 `this.openModal`를 `data` 값으로 업데이트 해주면 이벤트 구현이 완성된다.
 
-```{vue}
+```vue
 <template>
   <div class="w-full bg-white">
-
     <!-- popup window -->
     <PopUpView v-if="this.openModal == true" @sendClose="closeModalView" />
     ...
@@ -132,7 +143,6 @@ export default {
   }
 }
 </script>
-
 ```
 
 ### 마지막으로

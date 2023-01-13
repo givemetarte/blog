@@ -19,8 +19,14 @@ tags:
 
 아래와 비슷한 에러였는데, 계속해서 `docker-compose up`을 하면 `error getting credentials` 하면서 정상적으로 컴포즈가 작동하지 않았다. 구글링하면서 찾아본 결과 유사한 사례가 바로 [이 사례](https://github.com/docker/docker-credential-helpers/issues/60)였다. 이전 에러가 `docker-compose`의 버전 때문에 작동하지 않아서 최신 버전으로 `docker-compose`를 업데이트했다. 이 패키지가 업데이트 될 때, `golang-docker-credential-helpers`도 함께 설치된다.
 
-```
+```bash
 error getting credentials - err: exit status 1, out: Error spawning command line 'dbus-launch --autolaunch=d7159335070ef1c0854c75de55c8f588 --binary-syntax --close-stderr': Child process exited with code 1
 ```
 
-위의 에러는 `golang-docker-credential-helpers`를 제거하니 해결됐다. `sudo apt remove golang-docker-credential-helpers` 해주고, `docker-compose up`을 해주면 정상적으로 작동한다.
+위의 에러는 `golang-docker-credential-helpers`를 제거하니 해결됐다.
+
+```bash
+sudo apt remove golang-docker-credential-helpers
+```
+
+위와 같이 `golang-docker-credential`을 제거해주고, `docker-compose up`을 해주면 정상적으로 작동한다.

@@ -95,11 +95,21 @@ export default {
       '/blog/rdflib-tutorial-dcat-2',
       '/blog/python-sparql-endpoint',
       '/blog/resolve-cors-error',
+      '/blog/vue-deploy-subdirec',
+      '/blog/modal-window-vue',,
+      '/blog/ubuntu-docker-compose-error'
     ]
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-atom-dark.css'
+      }
+    },
+    liveEdit: false
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

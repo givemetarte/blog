@@ -36,7 +36,7 @@ server {
 
 `Apache`도 `Nginx`와 같이 헤더를 설정해주면 된다. 첫번째 줄만 설정해줘도 작동하지만, `nosniff`옵션도 추가해줬다. `SPARQL` 엔드포인트는 마찬가지로 `http://test.com/blazegraph/sparql`로 설정해주면 된다.
 
-```apache
+```apacheconf
 <VirtualHost *:80>
     ServerName test.com
 

@@ -45,7 +45,7 @@ sparql_endpoint = os.environ.get("SPARQL_ENDPOINT")
 
 그래프 데이터베이스에서 데이터를 추출하기 위해서는 `SPARQL`로 질의문을 작성해야 한다. 이 포스팅은 지난 포스팅에서 [공공데이터포털의 데이터세트에 대한 메타데이터를 추출하는 질의문 Q3](/blog/rdflib-tutorial-dcat-2)을 사용한다.
 
-```SPARQL
+```sparql
 SELECT DISTINCT ?dataset ?title ?orgName ?issued ?modified ?accessURL
 WHERE {
     ?dataset a dcat:Dataset ;
