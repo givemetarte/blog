@@ -52,10 +52,10 @@
     async asyncData({ $content, params, error }) {
       try {
         const article = await $content('blog', params.slug).fetch();
-
+        console.log(article)
         const [prev, next] = await $content('blog')
           .only(['title', 'slug'])
-          .sortBy("datetime", "asc")
+          .sortBy("createdAt", "asc")
           .surround(params.slug)
           .fetch()
         
