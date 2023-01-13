@@ -155,7 +155,7 @@ code::after {
 }
 
 code {
-  @apply px-1 py-1 bg-beigelight rounded-md;
+  @apply px-1 py-1 rounded-md;
 }
 
 .keepall{
