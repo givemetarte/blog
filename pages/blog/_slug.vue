@@ -7,7 +7,7 @@
       <h1 class="px-5 md:px-0 md:pt-10 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 keepall">
         {{ article.title }}
       </h1>
-      <p class="text-base md:text-base text-gray-500 text-center">{{article.datetime}} by {{article.author}}</p>
+      <p class="text-base md:text-base text-gray-500 text-center">{{ article.datetime }} by {{ article.author }}</p>
     </header>
 
     <div class="hidden lg:block w-full">
