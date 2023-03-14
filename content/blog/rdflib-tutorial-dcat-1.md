@@ -6,7 +6,7 @@ author: 박하람
 category: Knowledge Graph
 datetime: 2022. 09. 02. 20:00
 language: Korean
-featured: Featured
+featured: None
 tags:
   - RDF
   - RDFLib

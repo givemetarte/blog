@@ -6,7 +6,7 @@ author: 박하람
 category: Knowledge Graph
 datetime: 2022. 10. 25.
 language: Korean
-featured: Featured
+featured: None
 tags:
   - CORS
   - SPARQL endpoint

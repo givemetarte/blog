@@ -6,7 +6,7 @@ author: 박하람
 category: Knowledge Graph
 datetime: 2022. 10. 24.
 language: Korean
-featured: Featured
+featured: None
 tags:
   - sparql endpoint
   - SPARQLWrapper

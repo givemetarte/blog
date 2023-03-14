@@ -6,7 +6,7 @@ author: 박하람
 category: Web Development
 datetime: 2023. 01. 13.
 language: Korean
-featured: Featured
+featured: None
 tags:
   - AWS EC2
   - Ubuntu

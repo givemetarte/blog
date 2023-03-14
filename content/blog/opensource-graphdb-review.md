@@ -6,7 +6,7 @@ author: 박하람
 category: Knowledge Graph
 datetime: 2021. 12. 24.
 language: Korean
-featured: Featured
+featured: None
 tags:
   - 지식그래프
   - 트리플스토어

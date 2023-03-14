@@ -6,7 +6,7 @@ author: 박하람
 category: Knowledge Graph
 datetime: 2022. 07. 27. 20:20
 language: Korean
-featured: Featured
+featured: None
 tags:
   - blazegraph
   - named graph
