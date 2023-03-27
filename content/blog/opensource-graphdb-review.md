@@ -22,7 +22,7 @@ tags:
 
 <div class="note">
 
-🐶 예시 트리플 데이터: [LINK]()
+🐶 예시 트리플 데이터: [LINK](https://github.com/givemetarte/blog/blob/main/static/opensource-graphdb-review/test-triples-230327.ttl) (2023-03-27 Updated)
 
 </div>
 
