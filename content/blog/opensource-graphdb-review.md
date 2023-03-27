@@ -18,6 +18,14 @@ tags:
 
 오픈소스 또는 무료 버전의 Blazegraph, Virtuoso와 GraphDB를 설치하고, 트리플 데이터를 업로드해보자. 그래프 데이터베이스에서 제공하는 `SPARQL` 쿼리 기능도 사용해보자. 개발환경은 MacOS 기반이며, `Java 14.0.2` 버전으로 테스트했다.
 
+### 트리플 데이터 공유
+
+<div class="note">
+
+🐶 예시 트리플 데이터: [LINK]()
+
+</div>
+
 ### Blazegraph 오픈소스 버전
 
 #### Blazegraph 설치
