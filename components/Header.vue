@@ -18,7 +18,7 @@
                             <nuxt-link :to="{path: '/about'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">About</nuxt-link>
                         </div>
                     </li>
-                    <li class="flex flex-row items-center justify-center group">
+                    <li class="flex flex-row items-center justify-center group py-1 px-2">
                         <div class="pr-1 text-gray-700 text-sm md:text-base group-hover:text-cherry poppins">
                             <a href="https://harampark.com" target="blank">Portfolio</a>
                         </div>
