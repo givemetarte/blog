@@ -97,7 +97,8 @@ export default {
       '/blog/resolve-cors-error',
       '/blog/vue-deploy-subdirec',
       '/blog/modal-window-vue',,
-      '/blog/ubuntu-docker-compose-error'
+      '/blog/ubuntu-docker-compose-error',
+      '/blog/pandas-explode'
     ]
   },
 
