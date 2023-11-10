@@ -4,7 +4,7 @@ description: 특정 컬럼의 셀에 리스트로 구성된 값이 있는데, �
 slug: pandas-explode
 author: 박하람
 category: Data
-datetime: 2023. 4. 7.
+datetime: 2023. 04. 07.
 language: Korean
 featured: None
 tags:

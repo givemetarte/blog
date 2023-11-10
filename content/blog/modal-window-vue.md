@@ -4,7 +4,7 @@ description: Vue3에서 간단한 팝업창을 만들어 보자. 컴포넌트로
 slug: modal-window-vue
 author: 박하람
 category: Web Development
-datetime: 2023. 1. 13.
+datetime: 2023. 01. 13.
 language: Korean
 featured: Featured
 tags:

@@ -98,7 +98,8 @@ export default {
       '/blog/vue-deploy-subdirec',
       '/blog/modal-window-vue',,
       '/blog/ubuntu-docker-compose-error',
-      '/blog/pandas-explode'
+      '/blog/pandas-explode',
+      '/blog/python-pandas-none'
     ]
   },
 
