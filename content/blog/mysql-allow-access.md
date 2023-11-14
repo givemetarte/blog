@@ -61,7 +61,7 @@ select host, user from user;
 권한 설정이 잘 되었는지 확인하고 싶다면, user 테이블에서 `harampark`의 host가 %로 설정되었는지 확인한다.
 다시 위의 코드를 돌렸더니 데이터가 잘 출력된다 🥰
 
-### 추가: `.env` 수정사항이 잘 안 먹힐 때
+### 추가1: `.env` 수정사항이 잘 안 먹힐 때
 
 개인정보가 담긴 데이터는 모두 `.env` 파일에 저장하고, 깃헙에 올리지 않고 있다.
 그런데 `.env`에 담긴 값을 변경해도 변경사항이 잘 작동하지 않는 문제가 발생했다. 찾아보다가 [이 블로그](https://blog.naver.com/PostView.naver?blogId=hellojinny_&logNo=222473400245&parentCategoryNo=&categoryNo=152&viewDate=&isShowPopularPosts=true&from=search)에서 os.environ은 처음 파이썬 시작 중에 os 모듈을 처음 가져올 때 지정된다고 한다. 즉, 파이썬이 이미 실행된 상태에서 `.env`의 내용을 바꿔도 `os.environ`이 잡아내지 못한다는 의미다.
@@ -69,3 +69,24 @@ select host, user from user;
 ![파이썬 커널 변경하기](/mysql-allow-access/vscode-python-kernel.png)
 
 이럴 때 VSCODE에서 파이썬 커널을 변경하고, 다시 처음부터 코드를 실행하면 변경사항이 잘 작동한다! .conda (Python 3.9.16)을 잠시 Python 3.8.6으로 바꿔주고, 다시 .conda로 커널을 선택한 후 코드를 실행하면 변경사항이 적용된다.
+
+### 추가2:[Errno 61] Connection refused 에러
+
+다른 서버에 MySQL을 새로 설치했는데, Errno 61 접속 오류가 떴다. 터미널로도 접속이 안 되고, 파이썬 환경에서도 접속이 안됐다. 이 경우는 3306 포트가 열려있는지 확인하고, bind-address를 `0.0.0.0`으로 변경해야 한다^[1]. 코드는 [이 블로그]를 참고했다.
+
+```bash
+netstat -tulpen
+# 결과: tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      116        5067101    521390/mysqld
+```
+
+위 코드를 터미널에 입력하면, mysqld에 `127.0.0.1`이 부여된 걸 알 수 있다. 환경설정에서 `bind-address`를 `0.0.0.0`으로 변경해줘야 한다.
+
+```bash
+vim /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+![mysql 환경설정 변경하기](/mysql-allow-access/mysql-setting.png)
+
+vim 편집기가 익숙해서 vim 으로 `bind-address`를 `0.0.0.0`으로 수정하고, mysqlx-bind-address는 주석처리 해줬다. 결과는 외부 접속이 잘 된다!
+
+[1]: https://acckolee.tistory.com/entry/ubuntu-MySQL-server-with-error-61-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
