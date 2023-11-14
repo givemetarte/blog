@@ -1,5 +1,5 @@
 ---
-title: MySQL에서 외부 접속 허용하기 (+ .env 수정사항이 안 먹힐 때)
+title: MySQL에서 외부 접속 허용하기 (.env 수정사항이 안 먹힐 때, [Errno 61] Connection refused)
 description: pymysql로 외부 서버에 있는 MySQL에 접속하려면 외부 허용이 필요하다. 간단하게 외부 접근을 허용하는 방법에 대해 알아보자.
 slug: mysql-allow-access
 author: 박하람
