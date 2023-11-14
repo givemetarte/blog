@@ -72,7 +72,7 @@ select host, user from user;
 
 ### 추가2:[Errno 61] Connection refused 에러
 
-다른 서버에 MySQL을 새로 설치했는데, Errno 61 접속 오류가 떴다. 터미널로도 접속이 안 되고, 파이썬 환경에서도 접속이 안됐다. 이 경우는 3306 포트가 열려있는지 확인하고, bind-address를 `0.0.0.0`으로 변경해야 한다^[1]. 코드는 [이 블로그]를 참고했다.
+다른 서버에 MySQL을 새로 설치했는데, Errno 61 접속 오류가 떴다. 터미널로도 접속이 안 되고, 파이썬 환경에서도 접속이 안됐다. 이 경우는 3306 포트가 열려있는지 확인하고, bind-address를 `0.0.0.0`으로 변경해야 한다. 코드는 [이 블로그](https://acckolee.tistory.com/entry/ubuntu-MySQL-server-with-error-61-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0)를 참고했다.
 
 ```bash
 netstat -tulpen
@@ -88,5 +88,3 @@ vim /etc/mysql/mysql.conf.d/mysqld.cnf
 ![mysql 환경설정 변경하기](/mysql-allow-access/mysql-setting.png)
 
 vim 편집기가 익숙해서 vim 으로 `bind-address`를 `0.0.0.0`으로 수정하고, mysqlx-bind-address는 주석처리 해줬다. 결과는 외부 접속이 잘 된다!
-
-[1]: https://acckolee.tistory.com/entry/ubuntu-MySQL-server-with-error-61-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
