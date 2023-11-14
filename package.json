@@ -1,0 +1,38 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:prettier",
+    "lintfix": "prettier --write --list-different ."
+  },
+  "dependencies": {
+    "@nuxt-hero-icons/outline": "^1.0.1",
+    "@nuxt-hero-icons/solid": "^1.0.1",
+    "@nuxt/content": "^1.15.1",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "clipboard": "^2.0.8",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "nuxt-jsonld": "^1.5.3",
+    "prism-themes": "^1.9.0",
+    "vue": "^2.7.15",
+    "vue-server-renderer": "^2.7.15",
+    "vue-template-compiler": "^2.7.15",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "autoprefixer": "^10.4.0",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.7"
+  }
+}
