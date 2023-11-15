@@ -1,5 +1,5 @@
 ---
-title: local infile을 사용해 TXT 파일을 MySQL에 저장하기
+title: local infile을 사용해 TXT 파일을 MySQL에 저장하기 ([Errno 51] Network is unreachable)
 description: 한 줄씩 텍스트 파일을 읽지 않고, 한 번에 텍스트 파일을 MySQL에 업로드하는 방법에 대해 알아보자.
 slug: mysql-local-infile
 author: 박하람
