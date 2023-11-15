@@ -99,7 +99,8 @@ export default {
       '/blog/modal-window-vue',,
       '/blog/ubuntu-docker-compose-error',
       '/blog/pandas-explode',
-      '/blog/python-pandas-none'
+      '/blog/python-pandas-none',
+      '/blog/mysql-local-infile'
     ]
   },
 
