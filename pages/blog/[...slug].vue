@@ -1,6 +1,18 @@
 <script setup>
-// const route = useRoute()
-// console.log(route.params.slug)
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    const scriptTag = document.createElement('script');
+    scriptTag.src = 'https://utteranc.es/client.js';
+    scriptTag.setAttribute('repo', 'givemetarte/blog-comment');
+    scriptTag.setAttribute('issue-term', 'pathname');
+    scriptTag.setAttribute('label', 'Comment');
+    scriptTag.setAttribute('theme', 'github-light');
+    scriptTag.setAttribute('crossorigin', 'anonymous');
+    scriptTag.setAttribute('async', 'async');
+    // thx for copilot
+    document.getElementById('comment').appendChild(scriptTag);
+});
 
 const { path } = useRoute()
 const article = await useAsyncData('page-data', () => {
@@ -18,12 +30,12 @@ const [prev, next] = await queryContent('/blog')
 <template>
     <div class="relative max-w-4xl mx-auto justify-center mb-10 md:mb-10">
         <header class="flex flex-col item-start text-base justify-center text-center mt-1 mb-7 md:mb-16">
-        <span class="text-base md:text-base text-gray-400 mb-2">{{ article.data._value.category }}</span>
+            <span class="text-base md:text-base text-gray-400 mb-2">{{ article.data._value.category }}</span>
 
-        <h1 class="px-5 md:px-0 md:pt-10 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 keepall">
-            {{ article.data._value.title }}
-        </h1>
-        <p class="text-base md:text-base text-gray-500 text-center">{{ article.data._value.datetime }} by {{ article.data._value.author }}</p>
+            <h1 class="px-5 md:px-0 md:pt-10 mt-1 mb-5 text-2xl md:text-3xl text-center font-bold text-gray-700 keepall">
+                {{ article.data._value.title }}
+            </h1>
+            <p class="text-base md:text-base text-gray-500 text-center">{{ article.data._value.datetime }} by {{ article.data._value.author }}</p>
         </header>
 
         <div class="hidden lg:block w-full">
@@ -42,8 +54,10 @@ const [prev, next] = await queryContent('/blog')
             <div class="inline-flex text-gray-700 text-xs md:text-base">Tags:</div>
             <div v-for="(tag, idx) in article.data._value.tags" :key="idx" class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs mb-1">#{{ tag }}</div>
         </div>
-    <Comments />
-    <Prevnext :prev="prev" :next="next" />
+
+        <!-- <Comments /> -->
+        <div id="comment"></div>
+        <Prevnext :prev="prev" :next="next" />
     </div>
 </template>
 
@@ -72,6 +86,16 @@ code::after {
 
 .keepall{
     word-break: keep-all;
+}
+
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    text-decoration: none !important;
+}
+
+.utterances {
+  width: 100%;
+  margin: 0 !important;
+  max-width: 100%;
 }
 </style>
 
