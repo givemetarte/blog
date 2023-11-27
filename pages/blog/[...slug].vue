@@ -42,7 +42,7 @@ const [prev, next] = await queryContent('/blog')
             <div class="inline-flex text-gray-700 text-xs md:text-base">Tags:</div>
             <div v-for="(tag, idx) in article.data._value.tags" :key="idx" class="inline-flex text-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs mb-1">#{{ tag }}</div>
         </div>
-    <!-- <Comments /> -->
+    <Comments />
     <Prevnext :prev="prev" :next="next" />
     </div>
 </template>
