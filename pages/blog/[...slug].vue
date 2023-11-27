@@ -76,13 +76,13 @@ const [prev, next] = await queryContent('/blog')
   @apply underline-offset-2 decoration-cherry decoration-wavy;
 }
 
-/* code::before {
+code::before {
   content: none !important;
 }
 
 code::after {
   content: none !important;
-} */
+}
 
 .keepall{
     word-break: keep-all;
