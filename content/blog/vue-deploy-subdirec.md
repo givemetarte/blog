@@ -1,5 +1,5 @@
 ---
-title: [Vue 3] 도메인의 서브 디렉토리로 Vue Deploy하기
+title: 도메인의 서브 디렉토리로 Vue Deploy하기
 description: Vue 프로젝트를 도메인 단위가 아닌 서브 디렉토리를 발행하는 방법을 알아보자.
 slug: vue-deploy-subdirec
 author: 박하람
@@ -26,11 +26,11 @@ module.exports = defineConfig({
   transpileDependencies: true,
   filenameHashing: true,
   configureWebpack: (config) => {
-    config.output.filename = 'js/[name].[hash].js'
-    config.output.chunkFilename = 'js/[name].[hash].js'
+    config.output.filename = "js/[name].[hash].js";
+    config.output.chunkFilename = "js/[name].[hash].js";
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/projects/search/' : '/',
-})
+  publicPath: process.env.NODE_ENV === "production" ? "/projects/search/" : "/",
+});
 ```
 
 ### nginx 설정하기

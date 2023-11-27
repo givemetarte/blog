@@ -1,3 +1,17 @@
+<script setup>
+const articles = await useAsyncData('page-data', () => {
+    return queryContent('/blog').sort({ datetime: -1 }).limit(5).find()
+})
+
+const featured = await useAsyncData('page-featured-data', () => {
+    return queryContent('/blog').where({ featured: 'Featured'}).sort({ datetime: -1 }).limit(3).find()
+})
+
+const featuredone = await useAsyncData('page-featuredOne-data', () => {
+    return queryContent('/blog').where({ featured: 'Featured'}).sort({ datetime: -1 }).limit(1).find()
+})
+</script>
+
 <template>
   <div class="max-w-4xl mx-auto">
 
@@ -20,15 +34,12 @@
 
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0 pt-5">
       
-      <div v-for="(ftarticle, idx) of featured" :key="idx" class="nthz hidden md:block hover:drop-shadow-lg">
+      <div v-for="(ftarticle, idx) of featured.data._value" :key="idx" class="nthz hidden md:block hover:drop-shadow-lg">
         <nuxt-link :to='`/blog/${ftarticle.slug}`'>
           <div class="h-52 md:h-80">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
               <h3 class="text-gray-700 text-lg font-bold break-all mb-2">{{ ftarticle.title }}</h3>
-              <!--
-              <p class="text-sm md:text-sm text-gray-500 mb-1">{{ ftarticle.description }}</p>
-              -->
               <div v-for="(tag,idx) in ftarticle.tags" :key="idx" 
               class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs mr-1 mb-1">#{{ tag }}
               </div>
@@ -37,15 +48,12 @@
         </nuxt-link>
       </div>
 
-      <div v-for="(featarticle, idx) of featuredone" :key="idx" class="block md:hidden hover:drop-shadow-lg">
+      <div v-for="(featarticle, idx) of featuredone.data._value" :key="idx" class="block md:hidden hover:drop-shadow-lg">
         <nuxt-link :to='`/blog/${featarticle.slug}`'>
           <div class="back-purple rounded-lg h-60 py-5 px-6 relative">
             <div>
               <p class="text-xs text-gray-500">{{featarticle.category}}</p>
               <p class="text-base text-gray-700 font-bold pt-1 mb-2 keepall">{{featarticle.title}}</p>
-              <!--
-              <p class="text-gray-600 pt-1 ftmore mb-1">{{featarticle.description}}</p>
-              -->
               <div v-for="(tag,idx) in featarticle.tags" :key="idx" 
               class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs mr-1 mb-1">#{{ tag }}
               </div>
@@ -72,7 +80,7 @@
     </div>
 
     <div class="max-w-5xl grid grid-cols-1 md:grid-cols-1 mt-5 md:mt-6 mb-8 md:mb-12">
-        <div v-for="(article, idx) of articles" :key="idx" class="px-5 md:px-6 group">
+        <div v-for="(article, idx) of articles.data._value" :key="idx" class="px-5 md:px-6 group">
           <nuxt-link :to='`/blog/${article.slug}`'>
               <div class="flex justify-between border-t py-6 border-gray-200">
                 <div class="w-full md:w-5/6">
@@ -83,7 +91,7 @@
                 </div>
                 <div class="hidden md:block pl-4 pr-6">
                   <div class="h-full py-10">
-                    <outline-link-icon class="w-6 h-6 text-gray-400 group-hover:text-gray-700 transition duration-200" />
+                    <LinkIcon class="w-6 h-6 text-gray-400 group-hover:text-gray-700 transition duration-200" />
                   </div>            
                 </div>
               </div>
@@ -95,7 +103,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
@@ -125,7 +133,7 @@ export default {
         }
     }
 }
-</script>
+</script> -->
 
 <style scoped>
 .keepall{
