@@ -1,22 +1,3 @@
-<script setup>
-useHead({
-  title: 'All articles',
-  htmlAttrs: {
-      lang: 'ko'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "Haram's Blog" },
-      { name: 'format-detection', content: 'telephone=no' }
-    ]
-})
-
-const articles = await queryContent('/blog')
-  .sort({ datetime: -1 })
-  .find()
-</script>
-
 <template>
   <div class="max-w-4xl mx-auto">
     <div class="px-5">
@@ -46,7 +27,7 @@ const articles = await queryContent('/blog')
                 </div>
                 <div class="hidden md:block pl-4 pr-6">
                   <div class="h-full py-10">
-                    <LinkIcon class="w-6 h-6 text-gray-400 group-hover:text-gray-700 transition duration-200" />
+                    <outline-link-icon class="w-6 h-6 text-gray-400 group-hover:text-gray-700 transition duration-200" />
                   </div>            
                 </div>
               </div>
@@ -56,7 +37,7 @@ const articles = await queryContent('/blog')
   </div>
 </template>
 
-<!-- <script>
+<script>
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
@@ -79,7 +60,7 @@ export default {
     ]
   },
 }
-</script> -->
+</script>
 
 <style scoped>
 .custom-text{

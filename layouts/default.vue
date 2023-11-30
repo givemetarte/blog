@@ -1,9 +1,9 @@
 <template>
-    <div class="bg-white">
-        <Header />
-        <NuxtPage />
-        <Footer />
-    </div>
+  <div class="bg-white">
+    <Header />
+    <Nuxt />
+    <Footer />
+  </div>
 </template>
 
 <script>
