@@ -16,21 +16,6 @@
       </div>
     </div>
 
-    <!-- TOC -->
-    <!-- <div class="hidden lg:block w-full">
-      <div class="flex relative">
-        <nuxt-content :document="article" class="prose max-w-3xl custom-text px-6 selection:bg-cherrylight" />
-        <div>
-          <ul class="flex flex-col w-1/5 fixed">
-            <li class="font-medium mb-2 text-gray-700">Table of Contents</li>
-            <li v-for="link of article.toc" :key="link.id" class="mb-2 text-gray-500 hover:text-gray-700">
-              <a :href="`#${link.id}`">{{ link.text }}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-
     <div class="block lg:hidden">
       <nuxt-content :document="article" class="prose max-w-4xl keepall px-6 selection:bg-cherrylight" />
     </div>

@@ -100,7 +100,9 @@ export default {
       '/blog/ubuntu-docker-compose-error',
       '/blog/pandas-explode',
       '/blog/python-pandas-none',
-      '/blog/mysql-local-infile'
+      '/blog/mysql-local-infile',
+      '/blog/blazegraph-bulk-data-upload',
+      '/blog/mac-nginx-install'
     ]
   },
 
