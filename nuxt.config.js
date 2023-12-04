@@ -102,7 +102,8 @@ export default {
       '/blog/python-pandas-none',
       '/blog/mysql-local-infile',
       '/blog/blazegraph-bulk-data-upload',
-      '/blog/mac-nginx-install'
+      '/blog/mac-nginx-install',
+      '/blog/ubuntu-virtuoso-data-upload'
     ]
   },
 
