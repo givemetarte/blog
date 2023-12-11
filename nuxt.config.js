@@ -78,9 +78,6 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     "@nuxtjs/sitemap",
-    '@nuxtjs/google-adsense', {
-      id: 'ca-pub-2995839243604748'
-    }
   ],
 
   sitemap: {
