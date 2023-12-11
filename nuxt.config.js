@@ -71,9 +71,6 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxt-hero-icons/outline/nuxt',
     '@nuxt-hero-icons/solid/nuxt',
-    '@nuxtjs/google-adsense', {
-      id: 'ca-pub-2995839243604748'
-    }
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -81,6 +78,9 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     "@nuxtjs/sitemap",
+    '@nuxtjs/google-adsense', {
+      id: 'ca-pub-2995839243604748'
+    }
   ],
 
   sitemap: {
