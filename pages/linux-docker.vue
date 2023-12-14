@@ -6,7 +6,7 @@
       </div>
   
       <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
-          <div class="px-5 md:px-6 group" v-for="article of articles" :key="article">
+          <div class="px-5 md:px-6 group" v-for="(article, idx) of articles" :key="article">
             <nuxt-link :to='`/blog/${article.slug}`'>
                 <div class="article-inner flex justify-between border-t py-6 border-gray-200">
                   <div class="w-full md:w-5/6">

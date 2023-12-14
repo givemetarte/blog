@@ -44,7 +44,7 @@ export default {
         content: 'Logo Image'
       },
       // google adsense
-      { name: 'google-adsense-account', content: 'ca-pub-2995839243604748' }
+      // { name: 'google-adsense-account', content: 'ca-pub-2995839243604748' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' },

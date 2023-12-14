@@ -1,5 +1,11 @@
 # blog
 
+## ERR_OSSL_EVP_UNSUPPORTED 에러 시 실행방법
+
+```bash
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
 ## Build Setup
 
 ```bash
