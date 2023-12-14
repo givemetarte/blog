@@ -8,6 +8,11 @@ export default {
     htmlAttrs: {
       lang: 'ko',
     },
+    scripts: {
+        async: true,
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2995839243604748',
+        crossorigin: 'anonymous'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
