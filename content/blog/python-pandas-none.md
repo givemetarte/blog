@@ -3,7 +3,7 @@ title: 판다스로 데이터 전처리할 때 매번 헷갈리는 코드 정리
 description: 판다스로 데이터를 전처리할 때 매번 헷갈리는 코드가 몇가지 있다. 기록용으로 나를 위해 정리해두는 판다스 코드 Tip!
 slug: python-pandas-none
 author: 박하람
-category: Python&Pandas
+category: Python
 datetime: 2023. 11. 10.
 language: Korean
 featured: None

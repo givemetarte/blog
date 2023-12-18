@@ -1,12 +1,12 @@
 <template>
     <div class="max-w-4xl mx-auto">
       <div class="px-5">
-          <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">Python & Pandas</div>
-          <div class="text-gray-600 font-normal text-sm md:text-base">파이썬 & 판다스 주제를 담은 글 모음입니다.</div>
+          <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">Python</div>
+          <div class="text-gray-600 font-normal text-sm md:text-base">파이썬 주제를 담은 글 모음입니다.</div>
       </div>
   
       <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
-          <div class="px-5 md:px-6 group" v-for="(article, idx) of articles" :key="article">
+          <div class="px-5 md:px-6 group" v-for="(article, idx) of articles" :key="idx">
             <nuxt-link :to='`/blog/${article.slug}`'>
                 <div class="article-inner flex justify-between border-t py-6 border-gray-200">
                   <div class="w-full md:w-5/6">
@@ -31,7 +31,7 @@
   export default {
     async asyncData({ $content, params }) {
       const articles = await $content('blog', params.slug)
-        .where({category: 'Python&Pandas'})
+        .where({category: 'Python'})
         .sortBy("datetime", "desc")
         .fetch();
       return {

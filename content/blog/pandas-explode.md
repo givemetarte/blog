@@ -3,7 +3,7 @@ title: 판다스의 explode 함수로 하나의 셀에 리스트로 입력된 �
 description: 특정 컬럼의 셀에 리스트로 구성된 값이 있는데, 리스트의 값을 쪼개 여러 행으로 표현해보자. 간단히 explode 함수를 적용해주면 된다.
 slug: pandas-explode
 author: 박하람
-category: Python&Pandas
+category: Python
 datetime: 2023. 04. 07.
 language: Korean
 featured: None

@@ -3,7 +3,7 @@ title: pymysql.err.ProgrammingError 한글 인코딩 문제 해결하기
 description: pymysql로 MySQL에 접속하고, 키워드를 검색해 데이터를 가져오는 과정에서 한글 인코딩 에러가 발생했다. pymysql로 데이터베이스에 접속할 때 인코딩 에러가 나지 않는 방법을 알아보자.
 slug: pymysql-encoding-error
 author: 박하람
-category: Python&Pandas
+category: Python
 datetime: 2022. 07. 27.
 language: Korean
 featured: None

@@ -65,7 +65,7 @@
       <nuxt-link :to="{path: '/knowledge-graph'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">지식그래프</span></span></nuxt-link>
       <nuxt-link :to="{path: '/data'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">데이터</span></span></nuxt-link>
       <nuxt-link :to="{path: '/frontend-web'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">웹개발</span></span></nuxt-link>
-      <nuxt-link :to="{path: '/python-pandas'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">Python&Pandas</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/python-pandas'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">Python</span></span></nuxt-link>
       <nuxt-link :to="{path: '/linux-docker'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">Linux&Docker</span></span></nuxt-link>
       <nuxt-link :to="{path: '/mysql'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">MySQL</span></span></nuxt-link>
       <nuxt-link :to="{path: '/web-server'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">웹서버</span></span></nuxt-link>
