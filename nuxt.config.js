@@ -1,3 +1,5 @@
+import { $content } from '@nuxt/content';
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -8,11 +10,11 @@ export default {
     htmlAttrs: {
       lang: 'ko',
     },
-    scripts: {
-        async: true,
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2995839243604748',
-        crossorigin: 'anonymous'
-    },
+    // scripts: {
+    //     async: true,
+    //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2995839243604748',
+    //     crossorigin: 'anonymous'
+    // },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,7 +46,7 @@ export default {
         content: 'Logo Image'
       },
       // google adsense
-      // { name: 'google-adsense-account', content: 'ca-pub-2995839243604748' }
+      { name: 'google-adsense-account', content: 'ca-pub-2995839243604748' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-cherry.ico' },
@@ -90,28 +92,11 @@ export default {
   sitemap: {
     hostname: 'https://blog.harampark.com',
     gzip: true,
-    routes: [
-      '/blog/blazegraph-named-graph/',
-      '/blog/dask-read-csv/',
-      '/blog/korea-admin-codes/',
-      '/blog/nuxt-tailwind-blog/',
-      '/blog/opensource-graphdb-review/',
-      '/blog/pymysql-encoding-error/',
-      '/blog/seo-schema-jsonld/',
-      '/blog/rdflib-tutorial-dcat-1',
-      '/blog/rdflib-tutorial-dcat-2',
-      '/blog/python-sparql-endpoint',
-      '/blog/resolve-cors-error',
-      '/blog/vue-deploy-subdirec',
-      '/blog/modal-window-vue',,
-      '/blog/ubuntu-docker-compose-error',
-      '/blog/pandas-explode',
-      '/blog/python-pandas-none',
-      '/blog/mysql-local-infile',
-      '/blog/blazegraph-bulk-data-upload',
-      '/blog/mac-nginx-install',
-      '/blog/ubuntu-virtuoso-data-upload'
-    ]
+    routes: async () => {
+      const blogPosts = await $content('blog').only(['slug']).fetch();
+      const routes = blogPosts.map((post) => `/blog/${post.slug}`);
+      return routes
+    }
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

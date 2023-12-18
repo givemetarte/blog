@@ -1,6 +1,6 @@
 ---
 title: Mixed Content The page at 'xxx' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'yyy'. This request has been blocked; the content must be served over HTTPS 에러 해결하기
-description: HTTP HTTPS가 함께 제공될 때 뜨는 Mixed Content 에러를 해결해보자.
+description: HTTP와 HTTPS가 함께 제공될 때 뜨는 Mixed Content 에러를 해결해보자.
 slug: mixed-content-error
 author: 박하람
 category: Web Development
