@@ -235,7 +235,7 @@ const eventHandlers = {
 ```
 
 `v-network-graph`는 Vue 환경에서 그래프 데이터를 시각화하기에 편리한 모듈이다. 기본적인 사용법은 간단하지만, 이것저것 기능을 추가하려면 생각보다 시간이 든다.
-특히, 노드와 엣지 데이터를 만드는 데 많은 시간을 소요했다..🥲 그래도 파이썬에서 시각화 할 때보다 훨씬 이쁜 거 같아서 만족하고 있다.
+특히, 노드와 엣지 데이터를 만드는 데 많은 시간을 소요했다..🥲 그래도 파이썬에서 시각화 할 때보다 훨씬 이쁜 거 같아서 만족한다.
 
 [^1]: https://dash14.github.io/v-network-graph/examples/basic.html#pan-and-zoom
 [^2]: https://dash14.github.io/v-network-graph/examples/layout.html#position-nodes-with-d3-force
