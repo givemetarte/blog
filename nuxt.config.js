@@ -10,11 +10,14 @@ export default {
     htmlAttrs: {
       lang: 'ko',
     },
-    // scripts: {
-    //     async: true,
-    //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2995839243604748',
-    //     crossorigin: 'anonymous'
-    // },
+    scripts: [
+      {
+        async: true,
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        'data-ad-client': 'ca-pub-2995839243604748',
+        crossorigin: 'anonymous'
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -87,7 +90,6 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     "@nuxtjs/sitemap",
-    '@nuxtjs/google-adsense'
   ],
 
   sitemap: {
@@ -98,10 +100,6 @@ export default {
       const routes = blogPosts.map((post) => `/blog/${post.slug}`);
       return routes
     }
-  },
-
-  googleAdsense: {
-    id: 'ca-pub-2995839243604748'
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
