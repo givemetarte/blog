@@ -96,8 +96,15 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: "Haram's Blog" },
-      { name: 'format-detection', content: 'telephone=no' }
-    ]
+      { name: 'format-detection', content: 'telephone=no' },
+    ],
+    link: [
+            {
+                hid: "canonical",
+                rel: "canonical",
+                href: 'https://blog.harampark.com/all-post'
+            },
+        ],
   },
 }
 </script>

@@ -43,7 +43,14 @@ export default {
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { hid: 'description', name: 'description', content: '대학원에서 지식공학을 공부하고 있습니다. 지식그래프, 데이터, 인공지능에 관심이 많습니다. 게시글과 관련된 이야기는 댓글로, 구체적인 코드는 github에서, 연락은 email로 해주세요.' },
         { name: 'format-detection', content: 'telephone=no' }
-        ]
+        ],
+        link: [
+            {
+                hid: "canonical",
+                rel: "canonical",
+                href: 'https://blog.harampark.com/about'
+            },
+        ],
     },
 }
 
