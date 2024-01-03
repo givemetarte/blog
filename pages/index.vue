@@ -135,12 +135,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-            {
-                hid: "canonical",
-                rel: "canonical",
-                href: 'https://blog.harampark.com'
-            },
-        ],
+        {
+            hid: "canonical",
+            rel: "canonical",
+            href: 'https://blog.harampark.com'
+        },
+    ],
   },
 }
 </script>
