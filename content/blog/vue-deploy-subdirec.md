@@ -26,11 +26,11 @@ module.exports = defineConfig({
   transpileDependencies: true,
   filenameHashing: true,
   configureWebpack: (config) => {
-    config.output.filename = "js/[name].[hash].js";
-    config.output.chunkFilename = "js/[name].[hash].js";
+    config.output.filename = 'js/[name].[hash].js'
+    config.output.chunkFilename = 'js/[name].[hash].js'
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/projects/search/" : "/",
-});
+  publicPath: process.env.NODE_ENV === 'production' ? '/projects/search/' : '/',
+})
 ```
 
 ### nginx 설정하기
