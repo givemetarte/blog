@@ -81,24 +81,27 @@ import streamlit as st
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
-# streamlit으로 제목과 input box 생성
-st.title("논문 초록 작성기")
-content = st.text_input("논문의 초록을 작성할 주제와 간단한 내용을 입력해주세요.")
+def main():
+  # streamlit으로 제목과 input box 생성
+  st.title("논문 초록 작성기")
+  content = st.text_input("논문의 초록을 작성할 주제와 간단한 내용을 입력해주세요.")
 
-# 언어모델 불러오기
-llm = ChatOpenAI(openai_api_key=openai_api_key)
-prompt = ChatPromptTemplate.from_messages(
-    [("system", "You are a world class paper writer."), ("user", "{input}")]
-)
-output_parser = StrOutputParser()
-chain = prompt | llm | output_parser
+  # 언어모델 불러오기
+  llm = ChatOpenAI(openai_api_key=openai_api_key)
+  prompt = ChatPromptTemplate.from_messages(
+      [("system", "You are a world class paper writer."), ("user", "{input}")]
+  )
+  output_parser = StrOutputParser()
+  chain = prompt | llm | output_parser
 
-# 버튼 클릭시 논문 초록 생성
-if st.button("논문 초록 작성하기"):
-    with st.spinner("초록 작성 중입니다..."):
-        result = chain.invoke({"input": f"{content}에 대한 논문의 초록을 작성해줘."})
-        st.write(result)
+  # 버튼 클릭시 논문 초록 생성
+  if st.button("논문 초록 작성하기"):
+      with st.spinner("초록 작성 중입니다..."):
+          result = chain.invoke({"input": f"{content}에 대한 논문의 초록을 작성해줘."})
+          st.write(result)
 
+if __name__ == "__main__":
+    main()
 ```
 
 아주 간략하게 '주소가 포함된 데이터세트의 분석'에 대한 논문의 초록을 써달라고 했을 때, 다음과 같은 결과가 나온다.
