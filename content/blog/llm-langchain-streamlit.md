@@ -104,6 +104,12 @@ if __name__ == "__main__":
     main()
 ```
 
+`main.py`에 작성한 코드를 streamlit으로 돌리려면, 다음의 코드를 실행한다.
+
+```py
+streamlit run main.py
+```
+
 아주 간략하게 '주소가 포함된 데이터세트의 분석'에 대한 논문의 초록을 써달라고 했을 때, 다음과 같은 결과가 나온다.
 
 ![result](/llm-langchain-streamlit/result.png)
