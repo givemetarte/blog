@@ -39,35 +39,35 @@ tags:
     <figcaption style="text-align: center;">Model Tuning과 Prompt Tuning의 비교(Lester et al., 2021)</figcaption>
 </figure>
 
-다음의 수식으로 Prompt Tuning을 직관적으로 이해해봅시다.
+다음의 수식으로 Prompt Tuning을 직관적으로 이해해보자.
 
 ① $Pr(y \,|\, X)$ $\to$ ② $Pr_{\theta}(Y \,|\, X)$ $\to$ ③ $Pr_{\theta}(Y \,|\, [P;X])$ $\to$ ④ $Pr_{\theta; \theta_P}(Y \,|\, [P; X])$
 
-- ①의 수식: 기존의 hard prompt는 $X$란 일련의 input 토큰이 존재할 때, $y$라는 단순한 class label을 예측합니다. 예를 들어, $y$는 Positive, Negative와 같은 단순한 문자열이 해당됩니다.
-- ②의 수식: soft prompt는 hard prompt에서 자연어로 표현된 결과와 달리, $Y$라는 class label이 표현된 토큰 시퀀스를 예측합니다. 즉, 이산적인 결과를 예측하기 보다 연속적인 값을 예측하는 것이라 해석할 수 있습니다. 학습의 결과는 input에 대한 출력 클래스의 확률로 표현되고, 가중치인 $\theta$가 매개변수화됩니다.
-- ③의 수식: Prompting은 $Y$의 생성에 조건을 주기 위해 모델에 부가적인 정보를 추가하는 방법입니다. 모델 파라미터인 $\theta$는 고정된 채로, 프롬프트라는 부가적인 정보는 $P$라는 일련의 토큰으로 표현됩니다. 이 $P$는 input 토큰인 $X$의 앞에 붙게 됩니다.
-- ④의 수식: 최적의 프롬프트를 찾는 것은 프롬프트 토큰 중에서 선택을 해야한다는 의미입니다. Prompt tuning은 $\theta$로 파라미터화된 프롬프트 $P$의 제한을 없애고, 프롬프트에 대한 추가 파라미터인 ${\theta}_P$로 가중치를 업데이트합니다. 즉, Prompt Tuning은 ${\theta}_P$가 gradient descent로 업데이트되면서 역전파(backpropagation)를 통해 $Y$의 확률을 최대화하는 방향으로 학습합니다.
+- ①의 수식: 기존의 hard prompt는 $X$란 일련의 input 토큰이 존재할 때, $y$라는 단순한 class label을 예측한다. 예를 들어, $y$는 Positive, Negative와 같은 단순한 문자열이 해당된다.
+- ②의 수식: soft prompt는 hard prompt에서 자연어로 표현된 결과와 달리, $Y$라는 class label이 표현된 토큰 시퀀스를 예측한다. 즉, 이산적인 결과를 예측하기 보다 연속적인 값을 예측하는 것이라 해석할 수 있다. 학습의 결과는 input에 대한 출력 클래스의 확률로 표현되고, 가중치인 $\theta$가 매개변수화된다.
+- ③의 수식: Prompting은 $Y$의 생성에 조건을 주기 위해 모델에 부가적인 정보를 추가하는 방법이다. 모델 파라미터인 $\theta$는 고정된 채로, 프롬프트라는 부가적인 정보는 $P$라는 일련의 토큰으로 표현된다. 이 $P$는 input 토큰인 $X$의 앞에 붙는다.
+- ④의 수식: 최적의 프롬프트를 찾는 것은 프롬프트 토큰 중에서 선택을 해야한다는 의미다. Prompt tuning은 $\theta$로 파라미터화된 프롬프트 $P$의 제한을 없애고, 프롬프트에 대한 추가 파라미터인 ${\theta}_P$로 가중치를 업데이트한다. 즉, Prompt Tuning은 ${\theta}_P$가 gradient descent로 업데이트되면서 역전파(backpropagation)를 통해 $Y$의 확률을 최대화하는 방향으로 학습한다.
 
 ### 고려사항
 
-Prompt Tuning의 고려사항은 다음의 2가지와 같습니다.
+Prompt Tuning의 고려사항은 다음의 2가지와 같다.
 
 - Prompt 표현의 초깃값을 무엇으로 할 것인가?
 
-Prompt 표현의 초깃값은 3가지 방법이 있습니다. 첫번째 방법은 무작위 초기화(random initialization)를 사용해 처음부터 모델을 훈련하는 것입니다. 두번째 방법은 개별 프롬프트 토큰을 모델의 vocabulary에서 추출한 임베딩으로 초기화하는 것입니다. 세번째는 프롬프트를 출력 클래스를 나열하는 임베딩으로 초기화하는 방법입니다. 테스트 결과에 따르면, 무작위 초기화를 해주는 것보다 vocabulary 또는 출력 클래스의 임베딩으로 초기화를 해주는 것이 더 좋은 성능이 나왔습니다.
+Prompt 표현의 초깃값은 3가지 방법이 있다. 첫번째 방법은 무작위 초기화(random initialization)를 사용해 처음부터 모델을 훈련하는 것이다. 두번째 방법은 개별 프롬프트 토큰을 모델의 vocabulary에서 추출한 임베딩으로 초기화하는 것이다. 세번째는 프롬프트를 출력 클래스를 나열하는 임베딩으로 초기화하는 방법이다. 테스트 결과에 따르면, 무작위 초기화를 해주는 것보다 vocabulary 또는 출력 클래스의 임베딩으로 초기화를 해주는 것이 더 좋은 성능이 나왔다.
 
 - Prompt의 길이를 얼마로 할 것인가?
 
-Prompt의 길이를 위한 파라미터의 비용은 $EP$로 계산합니다. $E$는 토큰 임베딩의 차원이고, $P$는 프롬프트의 길이입니다. 프롬프트의 길이가 더 짧을수록, 새로운 파라미터가 더 적게 튜닝되어야 합니다. 연구결과에 따르면, Prompt의 길이는 5~100 사이의 값이 적절한 것으로 나왔습니다.
+Prompt의 길이를 위한 파라미터의 비용은 $EP$로 계산한다. $E$는 토큰 임베딩의 차원이고, $P$는 프롬프트의 길이다. 프롬프트의 길이가 더 짧을수록, 새로운 파라미터가 더 적게 튜닝되어야 한다. 연구결과에 따르면, Prompt의 길이는 5~100 사이의 값이 적절한 것으로 나왔다.
 
 ### Results
 
-Prompt Tuning의 성능은 아래의 왼쪽 그림과 같습니다. Prompt Tuning은 모델의 크기가 커질수록 성능이 향상됩니다. 특히, 모델의 크기가 수십억 개의 파라미터를 초과하는 경우, Model Tuning과 거의 동일한 성능을 보입니다.
+Prompt Tuning의 성능은 아래의 왼쪽 그림과 같다. Prompt Tuning은 모델의 크기가 커질수록 성능이 향상된다. 특히, 모델의 크기가 수십억 개의 파라미터를 초과하는 경우, Model Tuning과 거의 동일한 성능을 보인다.
 
-오른쪽의 그림은 파인 튜닝에 필요한 파라미터의 개수를 비교한 결과입니다. Model Tuning이 100%의 파라미터를 갖고 있다면, Prompt Tuning은 0.001%의 파라미터를 가지고 Model Tuning만큼의 성능을 낼 수 있습니다. Prefix Tuning이 0.1%로 파라미터를 학습하는 것과 비교할 때, Prompt Tuning은 아주 적은 파라미터로 효율적인 Fine-Tuning이 가능해집니다. 즉, Prompt Tuning이 대규모의 언어모델을 특정한 다운스트림 태스크에 적용하는 데 효율적으로 사용될 수 있습니다.
+오른쪽의 그림은 파인 튜닝에 필요한 파라미터의 개수를 비교한 결과다. Model Tuning이 100%의 파라미터를 갖고 있다면, Prompt Tuning은 0.001%의 파라미터를 가지고 Model Tuning만큼의 성능을 낼 수 있다. Prefix Tuning이 0.1%로 파라미터를 학습하는 것과 비교할 때, Prompt Tuning은 아주 적은 파라미터로 효율적인 Fine-Tuning이 가능해진다. 즉, Prompt Tuning이 대규모의 언어모델을 특정한 다운스트림 태스크에 적용하는 데 효율적으로 사용될 수 있다.
 
 <figure>
-    <img src="../llm/static/img/3-5-results.png" title="Performances per Tuning">    
+    <img src="/llm-prompt-tuning/results.png" title="Performances per Tuning">    
     <figcaption style="text-align: center;">Prompt Tuning을 이용한 모델의 성능과 파라미터 개수(Lester et al., 2021)</figcaption>
 </figure>
 
@@ -75,15 +75,11 @@ Prompt Tuning의 성능은 아래의 왼쪽 그림과 같습니다. Prompt Tunin
 
 - Prefix tuning
 
-Prefix tuning은 모든 트랜스포머 레이어에 접두어 시퀀스를 붙여 학습시키는 방법입니다. Prefix tuning은 트랜스포머의 모든 계층에 접두어를 붙이는 반면, Prompt Tuning은 input 앞에 접두어를 붙여 하나의 프롬프트 표현을 사용합니다. 즉, Prompt Tuning은 Prefix tuning 보다 더 적은 파라미터로 모델의 Fine-Tuning이 가능합니다. 예를 들어, `BART`를 사용할 때, Prefix tuning은 인코더와 디코더 네트워크에 모두 접두사를 붙입니다. 그러나, Prompt Tuning은 인코더의 프롬프트에만 접두어를 붙입니다.np
-
-> Prefix tuning에 대한 자세한 정보는 [3-3. Prefix-Tuning](3-3-prefix-tuning.html)을 확인하세요.
+Prefix tuning은 모든 트랜스포머 레이어에 접두어 시퀀스를 붙여 학습시키는 방법다. Prefix tuning은 트랜스포머의 모든 계층에 접두어를 붙이는 반면, Prompt Tuning은 input 앞에 접두어를 붙여 하나의 프롬프트 표현을 사용한다. 즉, Prompt Tuning은 Prefix tuning 보다 더 적은 파라미터로 모델의 Fine-Tuning이 가능하다. 예를 들어, `BART`를 사용할 때, Prefix tuning은 인코더와 디코더 네트워크에 모두 접두사를 붙인다. 그러나, Prompt Tuning은 인코더의 프롬프트에만 접두어를 붙인다.
 
 - P-tuning
 
-P-tuning은 인간이 디자인한 패턴을 사용해 학습이 가능한 연속적인 prompt를 input 전체에 삽입하는 방법입니다. P-tuning은 입력 전체에 연속적인 prompt를 삽입하는 반면, Prompt Tuning은 접두어로 붙이기 때문에 P-tuning보다 단순해집니다. 또한, P-tuning은 프롬프트와 모델의 주요 파라미터를 같이 업데이트하는 반면, Prompt Tuning은 언어모델을 고정된 상태로 사용하기 때문에 더 효율적입니다.
-
-> P-tuning에 대한 자세한 정보는 [3-4. P-Tuning](3-4-p-tuning.html)을 확인하세요.
+P-tuning은 인간이 디자인한 패턴을 사용해 학습이 가능한 연속적인 prompt를 input 전체에 삽입하는 방법이다. P-tuning은 입력 전체에 연속적인 prompt를 삽입하는 반면, Prompt Tuning은 접두어로 붙이기 때문에 P-tuning보다 단순해진다. 또한, P-tuning은 프롬프트와 모델의 주요 파라미터를 같이 업데이트하는 반면, Prompt Tuning은 언어모델을 고정된 상태로 사용하기 때문에 더 효율적이다.
 
 ### 참고자료
 
