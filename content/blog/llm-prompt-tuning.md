@@ -75,7 +75,7 @@ Prompt Tuning의 성능은 아래의 왼쪽 그림과 같다. Prompt Tuning은 �
 
 - Prefix tuning
 
-Prefix tuning은 모든 트랜스포머 레이어에 접두어 시퀀스를 붙여 학습시키는 방법다. Prefix tuning은 트랜스포머의 모든 계층에 접두어를 붙이는 반면, Prompt Tuning은 input 앞에 접두어를 붙여 하나의 프롬프트 표현을 사용한다. 즉, Prompt Tuning은 Prefix tuning 보다 더 적은 파라미터로 모델의 Fine-Tuning이 가능하다. 예를 들어, `BART`를 사용할 때, Prefix tuning은 인코더와 디코더 네트워크에 모두 접두사를 붙인다. 그러나, Prompt Tuning은 인코더의 프롬프트에만 접두어를 붙인다.
+Prefix tuning은 모든 트랜스포머 레이어에 접두어 시퀀스를 붙여 학습시키는 방법이다. Prefix tuning은 트랜스포머의 모든 계층에 접두어를 붙이는 반면, Prompt Tuning은 input 앞에 접두어를 붙여 하나의 프롬프트 표현을 사용한다. 즉, Prompt Tuning은 Prefix tuning 보다 더 적은 파라미터로 모델의 Fine-Tuning이 가능하다. 예를 들어, `BART`를 사용할 때, Prefix tuning은 인코더와 디코더 네트워크에 모두 접두사를 붙인다. 그러나, Prompt Tuning은 인코더의 프롬프트에만 접두어를 붙인다.
 
 - P-tuning
 
