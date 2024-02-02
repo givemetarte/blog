@@ -3,7 +3,7 @@ title: 논문 리뷰 | GPT-3 (Language Models are Few-Shot Learners)
 description: Few-Shot Learning의 포문을 열었던 GPT-3의 논문 Langauge Models are Few-Shot Learners를 읽고 리뷰해보자.
 slug: llm-gpt-3-review
 author: 박하람
-category: LLM
+category: NLP/LLM
 datetime: 2024. 01. 31.
 language: Korean
 featured: None

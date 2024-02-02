@@ -3,7 +3,7 @@ title: LangChain으로 ChatGPT를 이용해 논문 초록 생성하기 (feat. St
 description: LangChain으로 ChatGPT를 사용해서 논문의 초록을 생성해보자. 추가적으로 ChatGPT의 결과를 Streamlit으로 이쁘게 나타내보자.
 slug: llm-langchain-streamlit
 author: 박하람
-category: LLM
+category: NLP/LLM
 datetime: 2024. 01. 11.
 language: Korean
 featured: None

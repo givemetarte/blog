@@ -3,7 +3,7 @@ title: 논문 리뷰 | PEFT의 대표적인 사례인 Prompt Tuning 알아보기
 description: HuggingFace의 PEFT 중 하나로 지원하는 Prompt Tuning에 대해 알아보자. Prompt Tuning을 제안한 논문인 The Power of Scale for Parameter-Efficient Prompt Tuning을 읽고 리뷰한다.
 slug: llm-prompt-tuning
 author: 박하람
-category: LLM
+category: NLP/LLM
 datetime: 2024. 01. 26.
 language: Korean
 featured: None

@@ -1,8 +1,8 @@
 <template>
     <div class="max-w-4xl mx-auto">
       <div class="px-5">
-          <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">LLM</div>
-          <div class="text-gray-600 font-normal text-sm md:text-base">LLM (Large Language Model) 주제를 담은 글 모음입니다.</div>
+          <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">NLP/LLM</div>
+          <div class="text-gray-600 font-normal text-sm md:text-base">NLP (Natural Language Processing) & LLM (Large Language Model) 주제를 담은 글 모음입니다.</div>
       </div>
   
       <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
@@ -31,7 +31,7 @@
   export default {
     async asyncData({ $content, params }) {
       const articles = await $content('blog', params.slug)
-        .where({category: 'LLM'})
+        .where({category: 'NLP/LLM'})
         .sortBy("datetime", "desc")
         .fetch();
       return {

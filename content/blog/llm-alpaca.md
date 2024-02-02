@@ -3,7 +3,7 @@ title: 논문 리뷰 | LLaMA를 파인튜닝한 Alpaca 모델 알아보기
 description: Alpaca는 스탠포드 대학에서 개발한 오픈소스 경량 모델로, 학술 예산 내에서 어떻게 언어모델을 개발했는지 알아보자.
 slug: llm-alpaca
 author: 박하람
-category: LLM
+category: NLP/LLM
 datetime: 2024. 01. 22.
 language: Korean
 featured: None
