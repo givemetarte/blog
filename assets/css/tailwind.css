@@ -42,6 +42,6 @@
 }
 
 /* 수식 작성할 때 2번 표기되는 것 방지 */
-/* span.katex-html {
+span.katex-html {
   display: none;
-} */
+}
