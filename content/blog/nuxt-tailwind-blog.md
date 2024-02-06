@@ -6,7 +6,7 @@ author: 박하람
 category: Web Development
 datetime: 2021. 12. 23.
 language: Korean
-featured: Featured
+featured: None
 tags:
   - nuxt
   - tailwind

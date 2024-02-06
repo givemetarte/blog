@@ -6,7 +6,7 @@ author: 박하람
 category: Data
 datetime: 2021. 12. 28. 20:00
 language: Korean
-featured: None
+featured: Featured
 tags:
   - 행정동코드
   - 법정동코드
