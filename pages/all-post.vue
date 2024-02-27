@@ -14,6 +14,7 @@
       <nuxt-link :to="{path: '/mysql'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">MySQL</span></span></nuxt-link>
       <nuxt-link :to="{path: '/web-server'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">웹서버</span></span></nuxt-link>
       <nuxt-link :to="{path: '/llm'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">NLP/LLM</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/etc'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">기타</span></span></nuxt-link>
     </div>
 
     <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
