@@ -8,7 +8,7 @@ datetime: 2024. 02. 27.
 language: Korean
 featured: None
 tags:
-  - mapboxgl를
+  - mapboxgl
   - geopandas
   - ChoroplethViz
   - crs
@@ -23,7 +23,7 @@ tags:
 
 ### 데이터 불러오기
 
-데이터를 불러오는 코드는 다음과 같다. 엑셀 파일은 `pandas`로 불러오면 되고, shp 파일은 `geopandas`로 불러올 수 있다. 구역의 도형 데이터는 인코딩이 `cp949`로 설정하면 된다.
+데이터를 불러오는 코드는 다음과 같다. 엑셀 파일은 `pandas`로 불러오면 되고, shp 파일은 `geopandas`로 불러올 수 있다. 구역의 도형 데이터는 인코딩을 `cp949`로 설정하면 된다.
 
 ```py
 import pandas as pd

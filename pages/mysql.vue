@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-4xl mx-auto">
       <div class="px-5">
-          <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">MySQL</div>
+          <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">MySQL ({{ articles.length }})</div>
           <div class="text-gray-600 font-normal text-sm md:text-base">MySQL 주제를 담은 글 모음입니다.</div>
       </div>
   
@@ -23,6 +23,20 @@
                 </div>
             </nuxt-link>
           </div>
+        </div>
+      <!-- Add pagination controls -->
+      <div class="flex justify-center mb-8">
+        <button @click="changePage(-1)" :disabled="currentPage === 1" class="mr-2 px-3 py-1 rounded-full text-gray-400 hover:bg-lavenderblush hover:drop-shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <button v-for="page in totalPages" :key="page" @click="gotoPage(page)" :class="{ 'bg-lavenderblush text-cherry': currentPage === page }" class="px-3 py-1 mx-1 text-gray-400 rounded-full hover:bg-lavenderblush hover:drop-shadow-sm">{{ page }}</button>
+        <button @click="changePage(1)" :disabled="currentPage === totalPages" class="ml-2 px-3 py-1 rounded-full text-gray-400 hover:bg-lavenderblush hover:drop-shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
       </div>
     </div>
   </template>
@@ -37,6 +51,30 @@
       return {
         articles
       }
+    },
+    data() {
+      return {
+        currentPage: 1,
+        articlesPerPage: 10, // Adjust as needed
+      };
+    },
+    computed: {
+      totalPages() {
+        return Math.ceil(this.articles.length / this.articlesPerPage);
+      },
+      paginatedArticles() {
+        const startIndex = (this.currentPage - 1) * this.articlesPerPage;
+        const endIndex = startIndex + this.articlesPerPage;
+        return this.articles.slice(startIndex, endIndex);
+      },
+    },
+    methods: {
+      changePage(offset) {
+        this.currentPage += offset;
+      },
+      gotoPage(page) {
+        this.currentPage = page;
+      },
     },
     head: {
       title: 'MySQL | Articles',
