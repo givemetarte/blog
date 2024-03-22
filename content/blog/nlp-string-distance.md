@@ -98,6 +98,8 @@ Jaro-Winkler distance는 대표적으로 [JaroWinkler](https://github.com/rapidf
 
 종합적으로 이 태스크에 적절한 알고리즘은 `Jaro-Winkler distance`라고 생각한다. 우선 `Hamming distance`는 동일한 길이를 가진 문자열만 유사성을 계산할 수 있기 때문에 제외한다. `Longest common sequence`는 유사한 컬럼명은 전치 형태가 많기 때문에 삽입과 삭제에 특화된 LCS는 제외한다. `Levenshtein`와 `Damerau-Levenshtein`은 다방면에서 편집 거리를 계산할 수 있지만, 긴 텍스트에 비교적 최적화되어 있다. 특히, 컬럼명은 초/중/종성의 변화가 크지 않기 때문에 굳이 초/중/종성을 고려한 Levestein 방식을 고려할 필요는 없다. 결론적으로 `Jaro-Winkler distance`가 짧은 길이와 전치에 특화되어 있어 컬럼명의 유사도를 찾는데 가장 적합한 알고리즘이라고 생각한다. 다만, 알고리즘의 계산 단위가 character일지, token(명사)일지는 고민해야 할 문제다..☺️
 
+후속 작업에 대한 포스팅은 [파이썬으로 String Metric을 사용한 단어의 유사성 평가하기](/blog/nlp-python-string-distance)에서 확인할 수 있습니다.
+
 ### 참고문헌
 
 - String metric, Wikipedia. Available: https://en.wikipedia.org/wiki/String_metric
