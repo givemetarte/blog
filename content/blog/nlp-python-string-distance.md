@@ -1,6 +1,6 @@
 ---
 title: 파이썬으로 String Metric을 사용한 단어의 유사성 평가하기
-description:
+description: 파이썬을 사용해 JaroWrinkler로 유사성을 계산하는 과정을 설명하고, 실제 결과의 검증방법에 대해 알아보자.
 slug: nlp-python-string-distance
 author: 박하람
 category: NLP/LLM
