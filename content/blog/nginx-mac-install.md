@@ -1,7 +1,7 @@
 ---
 title: Mac 환경에서 NGINX 설치하고 도메인 붙이기
 description: 맥 환경에서 Nginx를 설치하고 도메인을 부여하는 과정에 대해 알아보자.
-slug: mac-nginx-install
+slug: nginx-mac-install
 author: 박하람
 category: Web Server
 datetime: 2023. 12. 04.
