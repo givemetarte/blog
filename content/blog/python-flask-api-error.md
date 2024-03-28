@@ -25,7 +25,7 @@ RuntimeError: 'cryptography' package is required for sha256_password or caching_
 
 ### 에러 해결하기
 
-다행히 [stackoverflow]에서 이 에러에 대해 해결할 수 있는 간단한 방법을 제공했다. 직접적으로 이 모듈을 사용하지 않았는데, pymysql에서 db 데이터를 끌어오는 과정에서 간접적으로 사용했던 것으로 추정된다.
+다행히 [stackoverflow](https://stackoverflow.com/questions/54477829/cryptography-is-required-for-sha256-password-or-caching-sha2-password)에서 이 에러에 대해 해결할 수 있는 간단한 방법을 제공했다. 직접적으로 이 모듈을 사용하지 않았는데, pymysql에서 db 데이터를 끌어오는 과정에서 간접적으로 사용했던 것으로 추정된다.
 
 ```bash
 pip install cryptography
