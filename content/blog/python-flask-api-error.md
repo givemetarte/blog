@@ -1,5 +1,5 @@
 ---
-title: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods 에러 해결하기
+title: cryptography package is required for sha256_password or caching_sha2_password auth methods 에러 해결하기
 description: flask로 구축한 API를 호출할 때 cryptography 패키지 오류가 나타났다. 이 오류를 해결하는 간단한 방법에 대해 알아보자.
 slug: python-flask-api-error
 author: 박하람
