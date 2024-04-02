@@ -1,5 +1,5 @@
 ---
-title: KCI 논문의 서지 메타데이터를 얻는 3가지 방법 (feat. Easy Scraper와 Python, 텍스톰을 쓰지 말아야 하는 이유)
+title: KCI 논문의 서지 메타데이터를 얻는 3가지 방법 (feat. Easy Scraper와 Python)
 description: 서지 메타데이터를 다운로드 받거나 크롬 익스텐션인 Easy Scraper를 활용해 논문의 서지 메타데이터를 크롤링하는 방법에 대해 알아보자. 파이썬의 requests와 beautifulsoup을 활용해 크롤링하는 방법도 알아본다.
 slug: python-kci-abstract-crawling
 author: 박하람
