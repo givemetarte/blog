@@ -55,7 +55,7 @@ mkdir sites-enabled
 
 ```bash
 # 폴더에 들어가 개별 도메인에 대한 conf 파일 설정하기
-cd mkdir sites-available
+cd sites-available
 vim test.domain.com
 ```
 
