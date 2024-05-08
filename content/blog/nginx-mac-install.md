@@ -43,7 +43,7 @@ brew services restart nginx  # nginx 재시작
 
 ### sites-available과 sites-enabled 설정
 
-우분투 환경에서 `nginx`를 설정하면, `sites-available`과 `sites-enabled` 폴더가 자동생성된다. 보통 `sites-available`은 비활성화된 설정을 담아놓고, 활성화하고 싶을 때 `sites-available`에 있는 파일을 `sites-enabled` 폴더에 심볼링 링크를 건다. `homebrew`는 2개의 폴더를 자동으로 생성해주지 않아서 직접 폴더를 만든다.
+우분투 환경에서 `nginx`를 설정하면, `sites-available`과 `sites-enabled` 폴더가 자동생성된다. 보통 `sites-available`은 비활성화된 설정을 담아놓고, 활성화하고 싶을 때 `sites-available`에 있는 파일을 `sites-enabled` 폴더에 심볼링 링크를 건다. `homebrew`로 설치한 `nginx`는 2개의 폴더를 자동으로 생성해주지 않아서 직접 폴더를 만든다.
 
 ```bash
 # 폴더 생성하기
@@ -63,17 +63,17 @@ vim test.domain.com
 
 - `server_name`: 웹서버와 연결할 도메인 이름을 작성한다.
 - `access_log`와 `error_log`: 로그가 담길 경로와 파일명을 작성한다.
-- `root`: 웹 서버가 html을 불러올 홈 디렉토리를 작성한다. 해당 경로에 위치한 모든 폴더에서 웹 서버가 `html`을 읽어드린다.
+- `root`: 웹 서버가 html을 불러올 홈 디렉토리를 작성한다. 해당 경로에 위치한 모든 폴더에서 웹 서버가 `html`을 읽는다.
 - `try_files`: 웹 서버가 원하는 파일을 찾지 못할 경우 404 Not Found 오류를 반환한다.
 
 ```nginx
 server {
     server_name test.domain.com;
-    access_log /var/log/nginx/hike.cau.ac.kr.access.log;
-    error_log /var/log/nginx/hike.cau.ac.kr.error.log;
+    access_log /var/log/nginx/test.domain.com.access.log;
+    error_log /var/log/nginx/test.domain.com.error.log;
 
     location / {
-        root /Users/harampark/Documents/server;
+        root /path/to/server;
         index index.html;
         try_files $uri $uri/ =404;
     }
@@ -85,7 +85,7 @@ server {
 `sites-available` 폴더에서 `test.domain.com` 파일을 작성했다면, `sites-enabled` 폴더과 `sites-available` 폴더에 있는 `test.domain.com`의 파일을 심볼릭 링크로 연결한다. 심볼릭 링크는 `sudo` 환경에서 설정한다.
 
 ```bash
-sudo ln -s /usr/local/etc/nginx/sites-available/hike.cau.ac.kr /usr/local/etc/nginx/sites-enabled/hike.cau.ac.kr
+sudo ln -s /usr/local/etc/nginx/sites-available/test.domain.com /usr/local/etc/nginx/sites-enabled/test.domain.com
 ```
 
 정상적으로 심볼릭 링크가 걸어졌는지 확인하려면 `sites-enabled`에 들어가 `test.domain.com` 파일이 생겼는지 확인한다. `test.domain.com`의 설정을 바꾸고 싶다면, `sites-available`의 폴더에 있는 `test.domain.com` 파일을 수정하면 된다. `sites-available` 폴더에 있는 파일이 수정되면 심볼릭 링크가 걸린 파일은 자동으로 수정된다. 심볼링 링크를 걸어주지 않으면 `nginx`에 변경된 사항이 반영되지 않으므로!!! 심볼릭 링크를 걸어주는 것을 잊지 말자!
@@ -101,4 +101,4 @@ sudo nginx -t
 brew services restart nginx
 ```
 
-변경한 홈디렉토리인 `/Users/harampark/Documents/server`에 있는 `index.html` 파일이 `localhost:80`에도 보인다면, 홈디렉토리의 변경은 잘 된 것이다. 마지막으로 웹 브라우저에 `test.domain.com`을 접속했을 떄 홈 디렉토리에 있는 `index.html` 파일이 보인다면 성공적으로 웹 서버와 도메인을 연결했다!
+변경한 홈디렉토리에 있는 `index.html` 파일이 `localhost:80`에도 보인다면, 홈디렉토리의 변경은 잘 된 것이다. 마지막으로 웹 브라우저에 `test.domain.com`을 접속했을 떄 홈 디렉토리에 있는 `index.html` 파일이 보인다면 성공적으로 웹 서버와 도메인을 연결했다!
