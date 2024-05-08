@@ -13,6 +13,9 @@
       </div>
     </div>
 
+    <!-- search -->
+    <Search />
+
     <!--featured articles-->
     <div class="px-5">
         <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-bold">추천 글</div>

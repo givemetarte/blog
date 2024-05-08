@@ -104,7 +104,10 @@ export default {
       remarkPlugins: ['remark-math'],
       rehypePlugins: ['rehype-katex'],
     },
-    liveEdit: false
+    liveEdit: false,
+    experimental: {
+      search: true
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
