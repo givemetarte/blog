@@ -102,7 +102,7 @@ export default {
         theme: 'prism-themes/themes/prism-one-light.css'
       },
       remarkPlugins: ['remark-math'],
-      rehypePlugins: ['rehype-katex'],
+      rehypePlugins: ['rehype-katex']
     },
     liveEdit: false,
     experimental: {

@@ -25,6 +25,7 @@ export default {
 
 <style>
 @import url(../assets/css/fonts.css);
+@import url('katex/dist/katex.min.css');
 /* body {
   background-color: #232741;
 } */
