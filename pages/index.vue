@@ -3,7 +3,7 @@
 
     <!--블로그 소개-->
     <div class="pt-16">
-      <div class="pt-14 md:pt-36 pb-0 md:pb-10 max-w-6xl mx-auto px-6">
+      <div class="pt-14 md:pt-36 pb-6 md:pb-10 max-w-6xl mx-auto px-6">
           <h2 class="pb-6 poppins text-left md:text-left text-4xl md:text-6xl font-medium text-gray-800 font-title">
             Hi, I'm <span class="highlight-sm font-title">Haram</span> !
           </h2>
@@ -18,7 +18,7 @@
 
     <!--featured articles-->
     <div class="px-5">
-        <div class="pt-10 md:pt-12 text-lg md:text-xl text-gray-700 font-bold">추천 글</div>
+        <div class="pt-6 md:pt-12 text-lg md:text-xl text-gray-700 font-bold">추천 글</div>
     </div>
 
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-y-0 pt-5">

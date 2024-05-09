@@ -3,14 +3,14 @@
       <div class="shadow-sm md:shadow w-full rounded-lg border border-gray-300 flex items-center mb-4 py-3 md:py-3.5 px-5 bg-white">
           <SearchIcon class="text-gray-500" />
           <input placeholder="원하는 블로그 글을 검색해보세요." v-model="query" type="search" autocomplete="off" 
-          class="ml-3 bg-white flex-auto text-base text-gray-800 pr-3.5 md:pr-6 flex items-center placeholder-text-gray-400" />
+          class="ml-3 bg-white flex-auto text-sm md:text-base text-gray-800 pr-3.5 md:pr-6 flex items-center placeholder-text-gray-400" />
       </div>
 
       <ul v-if="articles.length" class="shadow-sm md:shadow rounded-lg border border-gray-300 px-4 bg-white">
-        <li class="text-gray-600 py-0.5 md:py-3 border-b text-sm lastborder" v-for="(article, idx) of articles" :key="idx">
+        <li class="text-gray-600 py-1 md:py-3 border-b text-xs md:text-sm lastborder" v-for="(article, idx) of articles" :key="idx">
           <nuxt-link :to='`/blog/${article.slug}`' class="flex flex-row justify-between">
             <div>{{ article.title }}</div>
-            <div><LinkIcon class="w-4 h-4"/></div>
+            <div class="content-center pl-2 md:pl-4"><LinkIcon class="w-3 h-3 md:w-4 md:h-4"/></div>
           </nuxt-link>
           
         </li>
