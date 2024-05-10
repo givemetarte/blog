@@ -11,26 +11,31 @@
             <div>
                 <!-- desktop view -->
                 <ul class="hidden md:flex space-x-2 text-base items-center">
-                    <li>
-                        <div class="py-1 px-2 rounded-lg">
-                            <nuxt-link :to="{path: '/all-post'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">Blog</nuxt-link>
-                        </div>
-                    </li>
-                    <!-- <li>
-                        <div class="py-1 px-2 rounded-lg">
-                            <nuxt-link :to="{path: '/about'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">About</nuxt-link>
-                        </div>
-                    </li> -->
-                    <li class="flex flex-row items-center justify-center group py-1 px-2">
-                        <div class="pr-1 text-gray-700 text-sm md:text-base group-hover:text-cherry poppins">
-                            <a href="https://harampark.com" target="blank">Portfolio</a>
-                        </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 group-hover:text-cherry">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                            </svg>
-                        </div>
-                    </li>
+                  <li>
+                    <div class="py-1 px-2 rounded-lg">
+                        <nuxt-link :to="{path: '/'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">Home</nuxt-link>
+                    </div>
+                  </li>
+                  <li>
+                      <div class="py-1 px-2 rounded-lg">
+                          <nuxt-link :to="{path: '/all-post'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">Blog</nuxt-link>
+                      </div>
+                  </li>
+                  <!-- <li>
+                      <div class="py-1 px-2 rounded-lg">
+                          <nuxt-link :to="{path: '/about'}" replace class="text-gray-700 text-sm md:text-base hover:text-cherry poppins">About</nuxt-link>
+                      </div>
+                  </li> -->
+                  <li class="flex flex-row items-center justify-center group py-1 px-2">
+                      <div class="pr-1 text-gray-700 text-sm md:text-base group-hover:text-cherry poppins">
+                          <a href="https://harampark.com" target="blank">Portfolio</a>
+                      </div>
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 group-hover:text-cherry">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                          </svg>
+                      </div>
+                  </li>
                 </ul>
             </div>
 
@@ -55,9 +60,10 @@
             </div>
 
             <ul class="divide-y pt-10 gray-text text-sm">
-              <li class="flex justify-center"><nuxt-link :to="{path: '/all-post'}" replace @click="isOpen = false" class="my-4 inline-block">Blog</nuxt-link></li>
+              <li class="flex justify-center"><nuxt-link :to="{path: '/'}" replace @click.native="closeMenu" class="my-4 inline-block">Home</nuxt-link></li>
+              <li class="flex justify-center"><nuxt-link :to="{path: '/all-post'}" replace @click.native="closeMenu" class="my-4 inline-block">Blog</nuxt-link></li>
               <li class="flex justify-center flex-row items-center group py-1 px-2">
-                <a href="https://harampark.com" @click="isOpen = false" class="my-4 mr-1 inline-block">Portfolio</a>
+                <a href="https://harampark.com" @click="closeMenu" class="my-4 mr-1 inline-block">Portfolio</a>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 group-hover:text-cherry">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -90,7 +96,10 @@
             methods: {
         drawer() {
             this.isOpen = !this.isOpen;
-            }
+            },
+        closeMenu() {
+          this.isOpen = false;
+          }
         },
         watch: {
     isOpen: {
