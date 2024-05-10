@@ -30,13 +30,24 @@ server {
         alias /path/to/file/;
         autoindex on;
         access_log /usr/local/etc/nginx/down.access.log;
-        error_log /usr/local/etc/nginx/down.error_log;
+        error_log /usr/local/etc/nginx/down.error.log;
         index index.html index.htm index.php;
         charset utf-8;
     }
 }
 ```
 
-이렇게 하고 저장한 후 `brew services reload nginx`를 실행한다. `test.domain.com/file/download/` 경로로 접속하면 다음과 같이 해당 폴더에 있는 파일 목록을 확인할 수 있다.
+### `nginx -t` 에러
+
+위와 같이 작성하고, `nginx -t`로 잘 돌아가는지 테스트 했는데, 다음과 같은 에러가 나타났다. `down.access.log`를 여는데 접근권한 문제로 실패했다는 것이다.
+
+```bash
+nginx -t
+# nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
+# nginx: [emerg] open() "/usr/local/etc/nginx/down.access.log" failed (13: Permission denied)
+# nginx: configuration file /usr/local/etc/nginx/nginx.conf test failed
+```
+
+[stackoverflow에서 참고한 글](https://stackoverflow.com/questions/18714902/nginx-permission-denied-for-nginx-on-ubuntu)에 따르면, superuser로 nginx -t를 실행해야 한다는 것이다. 따라서 `sudo nginx -t`를 입력하면 nginx가 정상적으로 작동한다. 이후 `brew services reload nginx`를 실행한다. `test.domain.com/file/download/` 경로로 접속하면 다음과 같이 해당 폴더에 있는 파일 목록을 확인할 수 있다.
 
 ![nginx file](/nginx-file-download/nginx-file.png)
