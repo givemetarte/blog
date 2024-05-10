@@ -37,9 +37,9 @@ server {
 }
 ```
 
-### `nginx -t` 에러
+### `nginx -t` 에러 해결하기
 
-위와 같이 작성하고, `nginx -t`로 잘 돌아가는지 테스트 했는데, 다음과 같은 에러가 나타났다. `down.access.log`를 여는데 접근권한 문제로 실패했다는 것이다.
+위와 같이 작성하고, `nginx -t`로 잘 돌아가는지 테스트 했는데, 2가지의 에러가 나타났다. 첫번째 에러는 다음과 같다. `down.access.log`를 여는데 접근권한 문제로 실패했다는 것이다.
 
 ```bash
 nginx -t
@@ -48,6 +48,26 @@ nginx -t
 # nginx: configuration file /usr/local/etc/nginx/nginx.conf test failed
 ```
 
-[stackoverflow에서 참고한 글](https://stackoverflow.com/questions/18714902/nginx-permission-denied-for-nginx-on-ubuntu)에 따르면, superuser로 nginx -t를 실행해야 한다는 것이다. 따라서 `sudo nginx -t`를 입력하면 nginx가 정상적으로 작동한다. 이후 `brew services reload nginx`를 실행한다. `test.domain.com/file/download/` 경로로 접속하면 다음과 같이 해당 폴더에 있는 파일 목록을 확인할 수 있다.
+[stackoverflow에서 참고한 글](https://stackoverflow.com/questions/18714902/nginx-permission-denied-for-nginx-on-ubuntu)에 따르면, superuser로 nginx -t를 실행해야 한다는 것이다. 따라서 `sudo nginx -t`를 입력하면 nginx가 정상적으로 작동한다.
+
+두번째 에러는 `nginx.pid`를 권한문제로 열 수 없다는 에러다. 이 경우도 [stackoverflow의 글](https://stackoverflow.com/questions/53507095/nginx-pid-permission-denied)의 답변으로 해결했다.
+
+```bash
+nginx -t
+# nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
+# nginx: [emerg] open() "/usr/local/var/run/nginx.pid" failed (13: Permission denied)
+# nginx: configuration file /usr/local/etc/nginx/nginx.conf test failed
+```
+
+다음과 같이 nginx를 멈춘 후 `chmod 777`로 권한 설정해주고 다시 nginx를 실행하면 정상적으로 작동한다.
+
+```bash
+sudo brew services stop nginx
+sudo chmod 777 /usr/local/var/run/nginx.pid
+sudo brew services start nginx
+sudo nginx -t
+```
+
+에러를 모두 해결한 후에 `test.domain.com/file/download/` 경로로 접속하면 다음과 같이 해당 폴더에 있는 파일 목록을 확인할 수 있다.
 
 ![nginx file](/nginx-file-download/nginx-file.png)
