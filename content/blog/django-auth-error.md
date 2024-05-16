@@ -6,7 +6,7 @@ author: 박하람
 category: Python
 datetime: 2024. 05. 16
 language: Korean
-featured: Featured
+featured: None
 tags:
   - django
   - pandas
