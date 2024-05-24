@@ -31,7 +31,14 @@ find . -type f -name 'error*' -exec rm {} \;
 
 ### 개별 서버별 로그 생성하기
 
-다음은 서버 별로 폴더를 만들어 `access.log`와 `error.log`를 다시 생성했다. 그 다음은 개별 서버를 설정한 nginx conf 파일에서 다음과 같은 코드를 작성한다. `access_log`와 `error_log`의 경로는 개별 파일이 있는 경로를 작성해주면 된다.
+우선 전역적으로 설정한 `access.log`와 `error.log` 설정을 주석처리한다. `etc/nginx/nginx.conf` 파일에서 다음의 코드를 주석처리한다.
+
+```
+# access_log /var/log/nginx/access.log;
+# error_log /var/log/nginx/error.log;
+```
+
+다음은 서버 별로 폴더를 만들어 `access.log`와 `error.log`를 다시 생성했다. 그 다음은 sites-available 폴더의 개별 서버 설정에서 다음과 같은 코드를 작성한다. `access_log`와 `error_log`의 경로는 개별 파일이 있는 경로를 작성해주면 된다.
 
 ```nginx
 server {
