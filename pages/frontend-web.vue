@@ -2,7 +2,18 @@
   <div class="max-w-4xl mx-auto">
     <div class="px-5">
         <div class="pt-10 md:pt-12 text-xl md:text-2xl text-gray-700 font-semibold mb-2">웹 개발 ({{ articles.length }})</div>
-        <div class="text-gray-600 font-normal text-sm md:text-base">웹 개발 주제를 담은 글 모음입니다.</div>
+        <div class="text-gray-600 font-normal text-sm md:text-base">웹 개발 주제를 담은 글 모음입니다. 다른 주제의 글을 보고싶다면 아래 태그를 클릭하세요.</div>
+    </div>
+
+    <div class="px-5 pt-10">
+      <nuxt-link :to="{path: '/knowledge-graph'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">지식그래프</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/data'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">데이터</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/python-pandas'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">Python</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/linux-docker'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">Linux&Docker</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/mysql'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">MySQL</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/web-server'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">웹서버</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/llm'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">NLP/LLM</span></span></nuxt-link>
+      <nuxt-link :to="{path: '/etc'}" replace><span class="tag-btn">#<span class="text-gray-600 text-sm">기타</span></span></nuxt-link>
     </div>
 
     <div class="max-w-4xl grid grid-cols-1 md:grid-cols-1 mt-11 md:mt-12 mb-8 md:mb-12">
