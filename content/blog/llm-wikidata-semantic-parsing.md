@@ -63,6 +63,6 @@ SELECT DISTINCT ?x WHERE {
 
 ### 정리하며
 
-이 논문을 흥미롭게 읽은 것은 자연어 질의에 부합하는 이름 기반의 SPARQL 질의문을 생성하는 방식이다. 이 논문에서 언급한 것처럼 대규모의 지식 베이스는 strict한 schema가 있기 보다 PID 또는 QID 방식으로 만들어질 것이라 생각하는데, 이를 LLM이 학습 가능한 방식으로 바꾸기 위해 이름 기반의 SPARQL 질의문으로 바꾼 것이 흥미로웠다. 그러나, wikidata endpoint에서 이렇게 이름으로 바꾼 질의문이 직접 쿼리가 가능한건지 의문은 들었다. 무엇보다 더 관심 있었던 부분은 entity linker의 작동 방식인데, Ayoola(2022)의 ReFinED를 파인튜닝 했다고만 설명하고 있어 추가적으로 논문을 살펴봐야 겠다고 생각했다. 특정 도메인 분야에서 LLM의 정확성을 높이기 위해 고품질의 사실정보를 구축한 지식 베이스가 있다면, 자연어 질의에 맞게 지식 베이스의 데이터를 가져오는 방법에 대한 인사이트를 얻을 수 있어서 개인적으로 만족한다.
+이 논문을 흥미롭게 읽은 것은 자연어 질의에 부합하는 이름 기반의 SPARQL 질의문을 생성하는 방식이다. 이 논문에서 언급한 것처럼 대규모의 지식 베이스는 strict한 schema가 있기 보다 PID 또는 QID 방식으로 만들어질 것이라 생각하는데, 이를 LLM이 학습 가능한 방식으로 바꾸기 위해 이름 기반의 SPARQL 질의문으로 바꾼 것이 흥미로웠다. 그러나, wikidata endpoint에서 이렇게 이름으로 바꾼 질의문이 직접 쿼리가 가능한건지 의문은 들었다. 무엇보다 더 관심 있었던 부분은 entity linker의 작동 방식인데, Ayoola(2022)의 ReFinED를 파인튜닝 했다고만 설명하고 있어 추가적으로 논문을 살펴봐야 겠다고 생각했다. 특정 도메인 분야에서 LLM의 정확성을 높이기 위해 고품질의 사실정보를 구축한 지식 베이스가 있다면, 자연어 질의에 맞게 지식 베이스의 데이터를 가져오는 방법에 대한 인사이트를 있는 논문이었다.
 
 [^1]: Ayoola, T., Tyagi, S., Fisher, J., Christodoulopoulos, C., & Pierleoni, A. (2022). ReFinED: An Efficient Zero-shot-capable Approach to End-to-End Entity Linking (No. arXiv:2207.04108). arXiv. https://doi.org/10.48550/arXiv.2207.04108
