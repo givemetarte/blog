@@ -1,6 +1,6 @@
 ---
 title: Nuxt 3와 Vue에서 .env 파일에 있는 변수 불러오기
-description:
+description: Nuxt 3와 Vue에서 모듈 설치 없이 가장 간단하게 .env 파일의 변수를 불러오는 방법에 대해 소개한다.
 slug: nuxt-env-variable
 author: 박하람
 category: Web Development
