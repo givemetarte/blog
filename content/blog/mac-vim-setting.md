@@ -22,7 +22,6 @@ tags:
 기본적으로 vim 설정은 [이 깃헙의 vimrc](https://github.com/amix/vimrc)를 가장 많이 사용하고 있다. 이전에 설정한 vim은 다양한 플러그인과 colortheme가 있는 awesome 버전을 사용했는데, 개인적으로 모르는 기능도 많고 무겁다 느껴져서 새롭게 설정한 버전은 basic 버전이다. 그러나 나는 좀 더 가볍게 설치하기 위해 깃헙에서 코드를 clone하지 않고, 다음과 같이 `.vimrc` 파일을 직접 생성했다. 반드시 `.vimrc` 파일은 `~/.vimrc`에 생성되어야 하는 것에 유의하자.
 
 ```bash
-mkdir ~/.vim
 vim ~/.vimrc
 ```
 
