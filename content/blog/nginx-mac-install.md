@@ -98,7 +98,7 @@ sudo ln -s /usr/local/etc/nginx/sites-available/test.domain.com /usr/local/etc/n
 sudo nginx -t
 # nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
 # nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
-brew services restart nginx
+sudo brew services restart nginx
 ```
 
 변경한 홈디렉토리에 있는 `index.html` 파일이 `localhost:80`에도 보인다면, 홈디렉토리의 변경은 잘 된 것이다. 마지막으로 웹 브라우저에 `test.domain.com`을 접속했을 떄 홈 디렉토리에 있는 `index.html` 파일이 보인다면 성공적으로 웹 서버와 도메인을 연결했다!
