@@ -90,7 +90,7 @@ export default {
     gzip: true,
     routes: async () => {
       const blogPosts = await $content('blog').only(['slug']).fetch();
-      const routes = blogPosts.map((post) => `/blog/${post.slug}`);
+      const routes = blogPosts.map((post) => `/blog/${post.slug}/`);
       return routes
     }
   },
