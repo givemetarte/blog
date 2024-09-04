@@ -35,6 +35,9 @@ pip install sparqlwrapper
 ```py
 import os
 from dotenv import load_dotenv
+import pandas as pd
+from pandas.io.json import json_normalize
+from SPARQLWrapper import SPARQLWrapper, JSON
 
 # load .env
 load_dotenv()
