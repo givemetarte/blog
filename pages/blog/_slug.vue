@@ -72,14 +72,14 @@
             {
             hid: 'og:url',
             name: 'og:url',
-            content: `https://www.blog.harampark.com/${this.$route.params.slug}`
+            content: `https://www.blog.harampark.com/${this.$route.params.slug}/`
             },
             ],
             link: [
               {
                 hid: "canonical",
                 rel: "canonical",
-                href: `https://blog.harampark.com/blog/${this.$route.params.slug}`,
+                href: `https://blog.harampark.com/blog/${this.$route.params.slug}/`,
               },
             ],
         }
