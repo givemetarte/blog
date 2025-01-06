@@ -82,9 +82,11 @@
     methods: {
       changePage(offset) {
         this.currentPage += offset;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       },
       gotoPage(page) {
         this.currentPage = page;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       },
     },
     head: {
