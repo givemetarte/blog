@@ -84,10 +84,18 @@ export default {
   methods: {
     changePage(offset) {
       this.currentPage += offset;
+      this.scrollToTop();
     },
     gotoPage(page) {
       this.currentPage = page;
+      this.scrollToTop();
     },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    }
   },
   head: {
     title: 'All articles',
