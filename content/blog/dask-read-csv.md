@@ -6,7 +6,7 @@ author: 박하람
 category: Python
 datetime: 2022. 08. 17.
 language: Korean
-featured: Featured
+featured: None
 tags:
   - dask
   - pandas

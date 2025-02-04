@@ -6,7 +6,7 @@ author: 박하람
 category: NLP/LLM
 datetime: 2024. 02. 02.
 language: Korean
-featured: None
+featured: Featured
 tags:
   - Levenshtein distance
   - Damerau-Levenshtein distance

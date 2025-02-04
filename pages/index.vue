@@ -25,15 +25,18 @@
       
       <div v-for="(ftarticle, idx) of featured" :key="`f-${idx}`" class="nthz hidden md:block hover:drop-shadow-lg">
         <nuxt-link :to='`/blog/${ftarticle.slug}`'>
-          <div class="h-52 md:h-80">
+          <div class="min-h-52 md:min-h-80">
             <div class="p-5 z-30">
               <p class="mb-1 md:mb-1 text-sm md:text-sm text-gray-500">{{ ftarticle.category }}</p>
               <h3 class="text-gray-700 text-lg font-bold break-all mb-2">{{ ftarticle.title }}</h3>
-              <!--
-              <p class="text-sm md:text-sm text-gray-500 mb-1">{{ ftarticle.description }}</p>
-              -->
-              <div v-for="(tag, idx) in ftarticle.tags" :key="`ft-${idx}`" 
-              class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs mr-1 mb-1">#{{ tag }}
+              <div class="flex flex-wrap gap-1">
+                <div v-for="(tag, idx) in ftarticle.tags.slice(0, 3)" :key="`ft-${idx}`" 
+                  class="inline-flex text-center px-2 py-1 opacity-70 rounded-full bg-gray-200 text-gray-500 text-xs">
+                  #{{ tag }}
+                </div>
+                <span v-if="ftarticle.tags.length > 3" class="text-xs text-gray-500">
+                  +{{ ftarticle.tags.length - 3 }} more
+                </span>
               </div>
             </div>
           </div>

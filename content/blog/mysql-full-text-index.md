@@ -6,7 +6,7 @@ author: 박하람
 category: MySQL
 datetime: 2024. 12. 19.
 language: Korean
-featured: None
+featured: Featured
 tags:
   - MySQL
   - full_text_index

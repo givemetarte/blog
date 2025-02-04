@@ -6,7 +6,7 @@ author: 박하람
 category: NLP/LLM
 datetime: 2025. 02. 04.
 language: Korean
-featured: None
+featured: Featured
 tags:
   - zotero plugin
   - chat with paper
